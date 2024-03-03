@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to right, #FF0000, #FFED00);
+}
+
+.container {
+    background-color: #FDEFE3;
+    margin-inline: 7%;
+    height: 100vh;
+}
+
+header * {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-inline: 3%;
+    border-bottom: 1px solid #ABABAB;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.menu_navegacao {
+    list-style: none;
+}
+
+.menu_navegacao li {
+    padding-right: 15px;
+}
+
+.menu_navegacao li a {
+    color: #000000;
+}
+
+.menu_navegacao li a:hover {
+    color: #FF0505;
+}
+
+header button {
+    padding: 9px 25px;
+    color: #FFFFFF;
+    background-color: #FF0505;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+main * {
+    font-family: 'Lucida Sans Unicode', Verdana, sans-serif;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h1 {
+    text-align: center;
+    margin-top: 6%;
+}
+
+.input-custon #input-endereco {
+    width: 45vh;
+    border-radius: 5px;
+    border: 1px solid #FF0505;
+    padding: 8px 13px;
+    font-size: 18px;
+    background-color: #FDEFE3;
+    text-align: center;
+    margin-top: 12%;
+}
+.input-custon #input-endereco:focus {
+    outline: none;
+}
+
+.input-custon {
+    position: relative;
+}
+.input-custon label {
+    position: absolute;
+    left: 137px;
+    bottom: 10px;
+    font-size: 18px;
+    transition: all .5s ease;
+}
+
+.input-custon #input-endereco:focus ~ label,
+.input-custon #input-endereco:valid ~ label
+{
+    transform: translateY(2.3em);
+}
+
+main div.botoes {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 15vh;
+}
+
+.botoes > div {
+    z-index: 0;
+    background-image: linear-gradient(to right, #FFDF5E, #FFCE00);
+    width: 400px;
+    height: 290px;
+    border-radius: 30px;
+    position: relative;
+}
+.botoes h2 {
+    margin-top: 3%;
+    text-align: center;
+    font-size: 48px;
+    color: #FFFFFF;
+}
+.botoes div > img {
+    z-index: -1;
+    width: 250px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.botoes div > button {
+    width: 220px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 30px 10px;
+    padding-block: 10px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    background-color: #FF0505;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+@media screen 
