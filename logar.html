@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/logar.css">
+    <title>oDelivery - Logar</title>
+</head>
+<body>
+    <div class="container">
+        <div class="radio-container">
+            <div class="radio-custom">
+                <input type="radio" name="opcao-logar" id="cliente" checked>
+                <label for="cliente">Cliente</label>
+            </div>
+            <div class="radio-custom">
+                <input type="radio" name="opcao-logar" id="parceiro">
+                <label for="parceiro">Parceiro</label>
+            </div>
+        </div>
+        <form action="" method="post">
+            <div class="dados">
+                <div class="input-custom">
+                    <input type="email" id="custom-input-email" required>
+                    <label for="custom-input-email">Digite seu Email</label>
+                </div>
+                <div class="input-custom">
+                    <input type="password" id="custom-input-password" required>
+                    <label for="custom-input-password">Digite sua Senha</label>
+                </div>
+            </div>
+            <a href="#">Esqueceu a senha?</a>
+            <div class="continuar">
+                <span>Continuar com: </span>
+                <i>Google</i>
+                <i>Facebook</i>
+                <i>Apple</i>
+            </div>
+            <input type="submit" value="Entrar">
+        </form>
+        <span>Não possui uma conta? </span>
+        <a href="#">Cadastre-se aqui!</a>
+    </div>
+</body>
+</html>

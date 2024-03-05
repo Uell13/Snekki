@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #FF0000, #FFED00);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    height: 70vh;
+    width: 120vh;
+    background-color: #FDEFE3;
+    padding-inline: 10%;
+}
+
+/* Botões de opção de login, CLIENTE OU PARCEIRO */
+.radio-container {
+    display: flex;
+    justify-content: center;
+    column-gap: 2.5em;
+    margin: 3.5em 0 4em;
+}
+.radio-custom input[type=radio] {
+    display: none;
+}
+.radio-custom label {
+    border: 1px solid #FF0505;
+    border-radius: 30px;
+    padding: 10px 24px;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+}
+.radio-custom input[type=radio]:checked ~ label {
+    color: red;
+    background-image: linear-gradient(to right, #FF0000, #FFED00);
+    color: #FFFFFF;
+}
+
+/* Inputs dos dados do usuário, email e senha customizados (deu um bugzinho mas depois eu arrumo) */
+.input-custom input {
+    width: 100%;
+    padding: 12px 18px;
+    font-size: 20px;
+    border: 2px solid #FF0505;
+    border-radius: 10px;
+    background-color: #FDEFE3;
+}
+.input-custom {
+    position: relative;
+    margin-bottom: 1.5em;
+}
+.input-custom label {
+    position: absolute;
+    font-size: 18px;
+    left: 1.2em;
+    bottom: .9em;
+    transition: all .3s ease;
+}
+
+.input-custom input:focus ~ label,
+.input-custom input:invalid ~ label
+{
+    font-size: 22px;
+    transform: translate(0, -.8em);
+    background-color: #FDEFE3;
+    padding: 0 10px;
+}
