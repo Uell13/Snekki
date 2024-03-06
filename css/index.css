@@ -132,6 +132,7 @@ main div.botoes {
     position: absolute;
     bottom: 0;
     right: 0;
+    padding: 5px;
 }
 .botoes div > button {
     width: 220px;

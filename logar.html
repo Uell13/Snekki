@@ -7,6 +7,9 @@
     <title>oDelivery - Logar</title>
 </head>
 <body>
+    <div class="logo">
+        <h1>oDelivery</h1>
+    </div>
     <div class="container">
         <div class="radio-container">
             <div class="radio-custom">
@@ -21,7 +24,7 @@
         <form action="" method="post">
             <div class="dados">
                 <div class="input-custom">
-                    <input type="email" id="custom-input-email" required>
+                    <input type="text" inputmode="email" id="custom-input-email" required>
                     <label for="custom-input-email">Digite seu Email</label>
                 </div>
                 <div class="input-custom">
@@ -32,14 +35,19 @@
             <a href="#">Esqueceu a senha?</a>
             <div class="continuar">
                 <span>Continuar com: </span>
-                <i>Google</i>
-                <i>Facebook</i>
-                <i>Apple</i>
+                <img src="svg/google_6424087.svg" width="50px">
+                <img src="svg/facebook_6422199.svg" width="50px">
+                <img src="svg/apple_6424299.svg" width="50px">
             </div>
-            <input type="submit" value="Entrar">
+            <div class="container-button">
+                <hr>
+                <input type="submit" value="Entrar">
+            </div>
         </form>
-        <span>Não possui uma conta? </span>
-        <a href="#">Cadastre-se aqui!</a>
+        <div class="cadastro">
+            <span>Não possui uma conta? </span>
+            <a href="#">Cadastre-se aqui!</a>
+        </div>
     </div>
 </body>
 </html>
