@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to right, #FF0000, #FFED00);
+}
+
+.container {
+    background-color: #FDEFE3;
+    margin-inline: 7%;
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3em;
+    padding: 10px;
+    background-color: #FDEFE3;
+}
+
+nav .logo {
+    width: 43px;
+    margin-right: 2em;
+}
+
+nav ul {
+    display: inline-flex;
+    column-gap: 1.8em;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+nav ul li:nth-child(3) a {
+    color: red;
+}
+
+nav .input-container {
+    border: 1px solid #FF0505;
+    border-radius: 10px;
+    padding: 0 8px;
+    background-color: #FDEFE3;
+    display: flex;
+    align-items: center;
+}
+
+nav .input-container input:focus {
+    outline: none;
+}
+
+nav .input-container input {
+    border: 1px solid transparent;
+    background-color: transparent;
+    padding: 9px 10px;
+    width: 20em;
+}
+
+nav .foto-usuario {
+    border-radius: 50%;
+    outline: 3px solid #FF0505;
+    width: 43px;
+    cursor: pointer;
+}
+
+nav .carrinho {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+nav .carrinho:hover {
+    background-color: #FF0505;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+nav .carrinho .carrinho-info {
+    margin-left: 5px;
+}
+
+main .filtros {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    column-gap: 2em;
+}
+
+main .filtros>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FF0505;
+    padding: 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+main section h2 {
+    color: #545454;
+    margin: 2em;
+}
+
+main section .mercados > div {
+    height: 180px;
+    width: 180px;
+    border: 1px solid #FF0000;
+    border-radius: 50%;
+}
+
+main section .mercados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em 4em;
+    margin-inline: 8em;
+}

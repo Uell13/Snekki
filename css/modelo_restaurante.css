@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to right, #FF0000, #FFED00);
+}
+
+.container {
+    background-color: #FDEFE3;
+    margin-inline: 7%;
+    min-height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3em;
+    padding: 10px;
+    background-color: #FDEFE3;
+}
+
+nav .logo {
+    width: 43px;
+    margin-right: 2em;
+}
+
+nav ul {
+    display: inline-flex;
+    column-gap: 1.8em;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+nav .input-container {
+    border: 1px solid #FF0505;
+    border-radius: 10px;
+    padding: 0 8px;
+    background-color: #FDEFE3;
+    display: flex;
+    align-items: center;
+}
+
+nav .input-container input:focus {
+    outline: none;
+}
+
+nav .input-container input {
+    border: 1px solid transparent;
+    background-color: transparent;
+    padding: 9px 10px;
+    width: 20em;
+}
+
+nav .foto-usuario {
+    border-radius: 50%;
+    outline: 3px solid #FF0505;
+    width: 43px;
+    cursor: pointer;
+}
+
+nav .carrinho {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+nav .carrinho:hover {
+    background-color: #FF0505;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+nav .carrinho .carrinho-info {
+    margin-left: 5px;
+}
+
+section .banner_restaurante {
+    border: 1px solid #FF0505;
+    border-radius: 10px;
+    margin: 1em 3em;
+}
+section .banner_restaurante h3 {
+    text-align: center;
+    padding: 2em;
+}
+
+section .informacoes {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 3em;
+}
+section .info-restaurante {
+    display: flex;
+    column-gap: 1em;
+    margin: 0 1em;
+}
+section .info-restaurante img {
+    padding: .1em;
+    border: 1px solid #FF0505;
+    border-radius: 50%;
+    width: 150px;
+}
+section .info-restaurante > div {
+    margin: 2em 0;
+}
+section .info-restaurante .estrela {
+    margin: 1em 0;
+}
+section .info-restaurante div p > span {
+    color: #FF0505;
+    cursor: pointer;
+}
+
+section .informacoes .botoes > div {
+    border: 1px solid #FF0505;
+    border-radius: 6px;
+    padding: .6em 1em;
+    margin: .9em;
+    cursor: pointer;
+}
+section .informacoes .botoes .btn_agenda {
+    display: flex;
+    flex-direction: column;
+}
+
+section .menu {
+    margin-inline: 3em;
+    margin-top: 1em;
+}
+section .menu h2 {
+    color: #454545;
+}
+section .menu .pratos > div {
+    height: 200px;
+    width: 600px;
+    min-width: 450px;
+    border: 1px solid #FF0505;
+    border-radius: 10px;
+}
+section .menu .pratos {
+    margin: 1em 0;
+    padding-bottom: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+section .menu .pratos div > img {
+    width: 40%;
+    height: 90%;
+}
+section .menu .pratos div {
+    display: flex;
+    justify-content: space-between;
+}
+section .menu .pratos div > img {
+    align-self: center;
+    margin: 0 1rem 0 0;
+}
+section .menu .pratos div ul li {
+    list-style-type: none;
+    font-size: 18px;
+    margin: 1rem;
+}
+section .menu .pratos div ul li:nth-child(4) {
+    color: red;
+    margin: 2rem 0 0 1rem;
+}
+
+/* Estilizando Modal VerMais */
+.janela-modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.modal-vermais {
+    width: 60%;
+    min-width: 450px;
+    min-height: 250px;
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    border-radius: 20px;
+    position: relative;
+}
+.fechar {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.janela-modal.abrir {
+    display: flex;
+}

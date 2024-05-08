@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="radio-container">
+            <div class="radio-custom">
+                <input type="radio" name="opcao-logar" id="cliente" checked>
+                <label for="cliente">Cliente</label>
+            </div>
+            <div class="radio-custom">
+                <input type="radio" name="opcao-logar" id="parceiro">
+                <label for="parceiro">Parceiro</label>
+            </div>
+        </div>
+
+        <form action="">
+            <input type="text" placeholder="Nome completo">
+            <input type="text" placeholder="CPF">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Senha">
+            <input type="text" placeholder="Confirme a senha">
+            <fieldset>
+                <select name="dia" id="dia">
+                    <option selected disabled>Dia</option>
+                </select>
+                <select name="mes" id="mes">
+                    <option selected disabled>Mês</option>
+                </select>
+                <select name="ano" id="ano">
+                    <option selected disabled>Ano</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <input type="tel" placeholder="Telefone">
+                <select name="genero" id="genero">
+                    <option selected disabled>Gênero</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                </select>
+            </fieldset>
+            <input type="submit" value="Cadastrar">
+        </form>
+    </div>
+</body>
+</html>

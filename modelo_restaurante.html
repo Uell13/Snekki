@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/modelo_restaurante.css">
+    <title>Modelo Restaurante Cadastrado no App</title>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Menu de navegação -->
+        <nav>
+            <img src="./imagens/logo.png" class="logo">
+        
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Restaurantes</a></li>
+                <li><a href="#">Mercados</a></li>
+            </ul>
+        
+            <div class="input-container">
+                <i class="bsc-search"></i>
+                <input type="text" placeholder="Busque por item ou loja">
+            </div>
+        
+            <img src="./avatar/avatar.jpg" alt="Foto do usuário" class="foto-usuario">
+        
+            <div class="carrinho">
+                <i class="bsc-shopping-bag"></i>
+                <div class="carrinho-info">
+                    <span>R$0,00</span><br>
+                    <span>0 itens</span>
+                </div>
+            </div>
+        
+        </nav>
+
+        <hr>
+
+        <section>
+
+            <div class="banner_restaurante">
+                <h3>Imagem Banner do Restaurante Aqui</h3>
+            </div>
+
+            <div class="informacoes">
+
+                <!-- Informações do restaurante -->
+                <div class="info-restaurante">
+                    <img src="./imagens/logo.png" alt="Imagem do Restaurante">
+                    <div>
+                        <h4>NOME DO RESTAURANTE AQUI</h4>
+                        <p><span onclick="abrirVerMais()">VER MAIS</span> | Pedido mínimo R$19,00</p>
+                        <div class="estrela">
+                            <span><i class="bsc-star-ratings"></i>4,6</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botões de opções para o usuário -->
+                <div class="botoes">
+                    <div class="btn_entrega">
+                        <span>Entrega</span>
+                    </div>
+                    <div class="btn_agenda">
+                        <span>Hoje 55-65</span>
+                        <span>R$ 10,00</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="menu">
+                <h2>Refeições</h2>
+                <div class="pratos">
+                    <div>
+                        <ul>
+                            <li>Nome do prato</li>
+                            <li>Descrição do prato</li>
+                            <li>Quantidade pessoas que serve</li>
+                            <li>VALOR</li>
+                        </ul>
+                        <img src="./imagens/svg-file.png">
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Nome do prato</li>
+                            <li>Descrição do prato</li>
+                            <li>Quantidade pessoas que serve</li>
+                            <li>VALOR</li>
+                        </ul>
+                        <img src="./imagens/svg-file.png">
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Nome do prato</li>
+                            <li>Descrição do prato</li>
+                            <li>Quantidade pessoas que serve</li>
+                            <li>VALOR</li>
+                        </ul>
+                        <img src="./imagens/svg-file.png">
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Nome do prato</li>
+                            <li>Descrição do prato</li>
+                            <li>Quantidade pessoas que serve</li>
+                            <li>VALOR</li>
+                        </ul>
+                        <img src="./imagens/svg-file.png">
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Nome do prato</li>
+                            <li>Descrição do prato</li>
+                            <li>Quantidade pessoas que serve</li>
+                            <li>VALOR</li>
+                        </ul>
+                        <img src="./imagens/svg-file.png">
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Nome do prato</li>
+                            <li>Descrição do prato</li>
+                            <li>Quantidade pessoas que serve</li>
+                            <li>VALOR</li>
+                        </ul>
+                        <img src="./imagens/svg-file.png">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <div class="janela-modal" id="janela-modal">
+        <div class="modal-vermais">
+            <button class="fechar" id="fechar">X</button>
+            <h1>Teste Modal</h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae tempore, quos quasi alias dolores voluptate quas odit natus nemo ea rerum quo voluptates eaque delectus obcaecati velit temporibus, facere soluta?</p>
+        </div>
+    </div>
+
+    <script async src="https://basicons.xyz/embed.js"></script>
+    <script src="./scripts/modelo_restaurante.js"></script>
+</body>
+</html>
