@@ -189,23 +189,23 @@ section .menu .pratos div ul li:nth-child(4) {
     left: 0;
     background-color: rgba(0, 0, 0, .8);
     display: none;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     z-index: 999;
 }
 .modal-vermais {
-    width: 60%;
+    width: 28%;
+    height: 100vh;
     min-width: 450px;
-    min-height: 250px;
+    min-height: 400px;
     background-color: rgb(255, 255, 255);
     padding: 50px;
-    border-radius: 20px;
     position: relative;
 }
 .fechar {
     position: absolute;
-    top: -10px;
-    right: -10px;
+    top: 10px;
+    left: 10px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -215,7 +215,97 @@ section .menu .pratos div ul li:nth-child(4) {
     font-size: 20px;
     cursor: pointer;
 }
-
 .janela-modal.abrir {
     display: flex;
+}
+
+/* Estilizando as opções do modal VerMais */
+.opcoes-modal-vermais {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    column-gap: 3rem;
+    font-size: 22px;
+    margin-bottom: 3rem;
+}
+.opcoes-modal-vermais > li {
+    cursor: pointer;
+}
+.opcoes-modal-vermais > li:nth-child(1) {
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    border-bottom: 2px solid rgb(255, 0, 0);
+}
+
+/* Estilizando as informações da opção SOBRE do modal VerMais */
+.sobre {
+    font-size: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.sobre div {
+    width: 100%;
+}
+.sobre div > h3 {
+    margin-block: .8rem;
+    font-weight: normal;
+}
+.sobre div > p {
+    font-size: 18px;
+    color: rgb(75, 75, 75);
+}
+.sobre.abrir {
+    display: flex;
+}
+
+/* Estilizando as informações da opção HORÁRIO do modal VerMais */
+.horario {
+    display: none;
+    justify-content: center;
+    font-size: 18px;
+}
+.horario table {
+    width: 100%;
+}
+.horario table th {
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    text-align: start;
+    font-weight: normal;
+}
+.horario table td {
+    padding-bottom: 1rem;
+}
+.horario.abrir {
+    display: flex;
+}
+
+/* Estilizando as informações da opção PAGAMENTO do modal VerMais */
+.pagamento {
+    display: none;
+}
+.pagamento h3 {
+    font-size: 18px;
+    color: rgb(89, 88, 86);
+    margin-block: 1rem;
+}
+.pagamento h4 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #595856;
+    margin-block: 1rem;
+}
+.pagamento div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem .6rem;
+}
+.pagamento div > p {
+    background-color: rgb(230, 230, 230);
+    padding: 10px 14px;
+    border-radius: 5px;
+}
+.pagamento.abrir {
+    display: block;
 }
