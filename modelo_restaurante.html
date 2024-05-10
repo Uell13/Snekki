@@ -60,7 +60,7 @@
 
                 <!-- Botões de opções para o usuário -->
                 <div class="botoes">
-                    <div class="btn_entrega">
+                    <div class="btn_entrega" onclick="abrirOpcaoDeEntrega()">
                         <span>Entrega</span>
                     </div>
                     <div class="btn_agenda">
@@ -225,6 +225,24 @@
                     <p>Elo</p>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="janela-modal-opcaoDeEntrega" id="janela-modal-opcaoDeEntrega">
+        <div class="modal-opcaoDeEntrega">
+            <button class="fechar-opcaoDeEntrega" id="fechar-opcaoDeEntrega">X</button>
+            <h2>Como quer receber seu pedido?</h2>
+            <label class="entrega" for="entrega">
+                <label for="entrega">Entrega<br>A gente leva até você.</label>
+                <input type="radio" name="opcaoDeEntrega" id="entrega">
+                <div class="bolinha"></div>
+            </label>
+            <label class="retirada" for="retirada">
+                <label for="retirada">Retirada<br>Você retira no local.</label>
+                <input type="radio" name="opcaoDeEntrega" id="retirada">
+                <div class="bolinha"></div>
+            </label>
+            <button type="submit">Salvar</button>
         </div>
     </div>
 
