@@ -4,22 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .form-style-8 {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px 30px 15px 30px;
+  background: #F4F7F9;
+  border: 5px solid #53687E;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-style-8 label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form-style-8 input[type="text"],
+.form-style-8 input[type="email"],
+.form-style-8 textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.form-style-8 textarea {
+  height: 100px;
+}
+
+.form-style-8 input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background: #53687E;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.form-style-8 input[type="submit"]:hover {
+  background: #3F5160;
+}
+    </style>
 </head>
 <body>
-    <button>ABRIR</button>
-    <dialog>
-        <h1>Teste</h1>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto laborum modi, enim eveniet debitis accusantium doloremque mollitia illum. Eos nobis at voluptate reiciendis dolorem quam rem ducimus itaque possimus accusamus.
-        </p>
-    </dialog>
-    <script>
-        const botao = document.querySelector("button")
-        const modal = document.querySelector("dialog")
-
-        botao.onclick = function() {
-            modal.showModal()
-        }
-    </script>
+    <!-- form.html -->
+    <form class="form-style-8" action="" method="post">
+        <label for="field1">
+            <span>Enter Your Name</span>
+            <input type="text" name="field1" required="true" />
+        </label>
+        <label for="field2">
+            <span>Email Address</span>
+            <input type="email" name="field2" required="true" />
+        </label>
+        <label for="field3">
+            <span>Short Subject</span>
+            <input type="text" name="field3" required="true" />
+        </label>
+        <label for="field4">
+            <span>Message to Us</span>
+            <textarea name="field4" onkeyup="adjust_textarea(this)" required="true"></textarea>
+        </label>
+        <label>
+            <span> </span>
+            <input type="submit" value="Send Letter" />
+        </label>
+    </form>
 </body>
 </html>

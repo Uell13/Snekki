@@ -5,13 +5,22 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+:root {
+    --cor-principal: rgb(253, 239, 227);
+    --cor-primaria: rgb(255, 0, 0);
+    --cor-secundaria: rgb(255, 237, 0);
+    --cor-titulo-cinza: rgb(130, 130, 130);
+    --cor-fundo-modal: rgba(0, 0, 0, .8);
+    --cor-fonte-botao: rgb(255, 255, 255);
+}
+
 body {
-    background-image: linear-gradient(to right, #FF0000, #FFED00);
+    background-image: linear-gradient(to right, var(--cor-primaria), var(--cor-secundaria));
 }
 
 .container {
-    background-color: #FDEFE3;
-    margin-inline: 7%;
+    background-color: var(--cor-principal);
+    margin-inline: 5vw;
     min-height: 100vh;
 }
 
@@ -21,7 +30,7 @@ nav {
     align-items: center;
     column-gap: 3em;
     padding: 10px;
-    background-color: #FDEFE3;
+    background-color: var(--cor-principal);
 }
 
 nav .logo {
@@ -43,11 +52,15 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    color: var(--cor-primaria);
+}
+
 nav .input-container {
-    border: 1px solid #FF0505;
+    border: 1px solid var(--cor-primaria);
     border-radius: 10px;
     padding: 0 8px;
-    background-color: #FDEFE3;
+    background-color: var(--cor-principal);
     display: flex;
     align-items: center;
 }
@@ -65,7 +78,7 @@ nav .input-container input {
 
 nav .foto-usuario {
     border-radius: 50%;
-    outline: 3px solid #FF0505;
+    outline: 3px solid var(--cor-primaria);
     width: 43px;
     cursor: pointer;
 }
@@ -77,7 +90,7 @@ nav .carrinho {
 }
 
 nav .carrinho:hover {
-    background-color: #FF0505;
+    background-color: var(--cor-primaria);
     border-radius: 30px;
     cursor: pointer;
 }
@@ -87,7 +100,7 @@ nav .carrinho .carrinho-info {
 }
 
 section .banner_restaurante {
-    border: 1px solid #FF0505;
+    border: 1px solid var(--cor-primaria);
     border-radius: 10px;
     margin: 1em 3em;
 }
@@ -108,7 +121,7 @@ section .info-restaurante {
 }
 section .info-restaurante img {
     padding: .1em;
-    border: 1px solid #FF0505;
+    border: 1px solid var(--cor-primaria);
     border-radius: 50%;
     width: 150px;
 }
@@ -119,12 +132,12 @@ section .info-restaurante .estrela {
     margin: 1em 0;
 }
 section .info-restaurante div p > span {
-    color: #FF0505;
+    color: var(--cor-primaria);
     cursor: pointer;
 }
 
 section .informacoes .botoes > div {
-    border: 1px solid #FF0505;
+    border: 1px solid var(--cor-primaria);
     border-radius: 6px;
     padding: .6em 1em;
     margin: .9em;
@@ -140,13 +153,12 @@ section .menu {
     margin-top: 1em;
 }
 section .menu h2 {
-    color: #454545;
+    color: var(--cor-titulo-cinza);
 }
 section .menu .pratos > div {
     height: 200px;
-    width: 600px;
-    min-width: 450px;
-    border: 1px solid #FF0505;
+    min-width: 400px;
+    border: 1px solid var(--cor-primaria);
     border-radius: 10px;
 }
 section .menu .pratos {
@@ -165,6 +177,7 @@ section .menu .pratos div > img {
 section .menu .pratos div {
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 section .menu .pratos div > img {
     align-self: center;
@@ -176,7 +189,7 @@ section .menu .pratos div ul li {
     margin: 1rem;
 }
 section .menu .pratos div ul li:nth-child(4) {
-    color: red;
+    color: var(--cor-primaria);
     margin: 2rem 0 0 1rem;
 }
 
@@ -187,7 +200,7 @@ section .menu .pratos div ul li:nth-child(4) {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: var(--cor-fundo-modal);
     display: none;
     justify-content: flex-end;
     align-items: center;
@@ -198,7 +211,7 @@ section .menu .pratos div ul li:nth-child(4) {
     height: 100vh;
     min-width: 450px;
     min-height: 400px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--cor-principal);
     padding: 50px;
     position: relative;
 }
@@ -210,8 +223,8 @@ section .menu .pratos div ul li:nth-child(4) {
     height: 30px;
     border-radius: 50%;
     border: none;
-    background-color: rgb(255, 0, 0);
-    color: rgb(255, 255, 255);
+    background-color: var(--cor-primaria);
+    color: var(--cor-fonte-botao);
     font-size: 20px;
     cursor: pointer;
 }
@@ -232,9 +245,9 @@ section .menu .pratos div ul li:nth-child(4) {
     cursor: pointer;
 }
 .indicacao-modal-vermais {
-    color: rgb(255, 0, 0);
+    color: var(--cor-primaria);
     font-weight: bold;
-    border-bottom: 2px solid rgb(255, 0, 0);
+    border-bottom: 2px solid var(--cor-primaria);
 }
 
 /* Estilizando as informações da opção SOBRE do modal VerMais */
@@ -253,7 +266,7 @@ section .menu .pratos div ul li:nth-child(4) {
 }
 .sobre div > p {
     font-size: 18px;
-    color: rgb(75, 75, 75);
+    color: var(--cor-titulo-cinza);
 }
 .sobre.abrir {
     display: flex;
@@ -287,13 +300,13 @@ section .menu .pratos div ul li:nth-child(4) {
 }
 .pagamento h3 {
     font-size: 18px;
-    color: rgb(89, 88, 86);
+    color: var(--cor-titulo-cinza);
     margin-block: 1rem;
 }
 .pagamento h4 {
     font-size: 16px;
     font-weight: normal;
-    color: #595856;
+    color: var(--cor-titulo-cinza);
     margin-block: 1rem;
 }
 .pagamento div{
@@ -317,7 +330,7 @@ section .menu .pratos div ul li:nth-child(4) {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: var(--cor-fundo-modal);
     display: none;
     justify-content: center;
     align-items: center;
@@ -327,7 +340,7 @@ section .menu .pratos div ul li:nth-child(4) {
     width: 28%;
     min-width: 450px;
     min-height: 400px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--cor-principal);
     padding: 50px;
     border-radius: 10px;
     position: relative;
@@ -342,8 +355,8 @@ section .menu .pratos div ul li:nth-child(4) {
     height: 30px;
     border-radius: 50%;
     border: none;
-    background-color: rgb(255, 0, 0);
-    color: rgb(255, 255, 255);
+    background-color: var(--cor-primaria);
+    color: var(--cor-fonte-botao);
     font-size: 20px;
     cursor: pointer;
 }
@@ -357,7 +370,7 @@ section .menu .pratos div ul li:nth-child(4) {
     margin-bottom: 1rem;
 }
 .modal-opcaoDeEntrega > label {
-    border: 1px solid rgb(255, 0, 0);
+    border: 1px solid var(--cor-primaria);
     border-radius: 10px;
     padding: 20px 40px;
     font-size: 18px;
@@ -367,12 +380,12 @@ section .menu .pratos div ul li:nth-child(4) {
     margin-block: .5rem;
 }
 .modal-opcaoDeEntrega > button[type='submit'] {
-    background-color: rgb(255, 0, 0);
+    background-color: var(--cor-primaria);
     border: transparent;
     padding: 20px;
     font-size: 30px;
     font-weight: bold;
-    color: rgb(255, 255, 255);
+    color: var(--cor-fonte-botao);
     border-radius: 10px;
     width: 50%;
     align-self: center;
@@ -383,10 +396,462 @@ section .menu .pratos div ul li:nth-child(4) {
     display: none;
 }
 .modal-opcaoDeEntrega > label > input[type='radio']:checked ~ div.bolinha {
-    border: 3px solid rgb(255, 255, 255);
-    outline: 3px solid rgb(255, 0, 0);
-    background-color: rgb(255, 0, 0);
+    border: 3px solid var(--cor-fonte-botao);
+    outline: 3px solid var(--cor-primaria);
+    background-color: var(--cor-primaria);
     border-radius: 50%;
     height: 30px;
     width: 30px;
+}
+
+/* Modal Prato */
+.janela-modal-prato {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--cor-fundo-modal);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.modal-prato {
+    width: 65%;
+    min-width: 450px;
+    min-height: 500px;
+    background-color: var(--cor-principal);
+    padding: 50px;
+    border-radius: 10px;
+    position: relative;
+}
+.fechar-prato {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--cor-primaria);
+    color: var(--cor-fonte-botao);
+    font-size: 20px;
+    cursor: pointer;
+}
+.janela-modal-prato.abrir {
+    display: flex;
+}
+
+.modal-prato {
+    display: flex;
+    column-gap: 2rem;
+}
+.modal-prato div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.modal-prato img {
+    border-radius: 3px;
+    -webkit-box-shadow: -4px 6px 8px -1px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: -4px 6px 8px -1px rgba(0, 0, 0, 0.6);
+    box-shadow: -4px 6px 8px -1px rgba(0, 0, 0, 0.6);
+}
+.modal-prato div .nome-receita {
+    align-self: center;
+    font-weight: normal;
+    font-size: 20px;
+}
+.modal-prato div .adicionais {
+    align-self: center;
+}
+.modal-prato div .valor {
+    align-self: center;
+    margin-right: 15rem;
+    margin-block: .8rem;
+    font-size: 20px;
+}
+.modal-prato div .info-restaurante {
+    border: 1px solid var(--cor-primaria);
+    border-radius: 10px;
+}
+.modal-prato div .info-restaurante > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+}
+.modal-prato div .info-restaurante > hr {
+    width: 92%;
+    align-self: center;
+    border: transparent;
+    border-bottom: .1px solid var(--cor-primaria);
+}
+.modal-prato div .info-restaurante div > h4 {
+    font-weight: normal;
+}
+.modal-prato div .textarea {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem .2rem .5rem;
+}
+.modal-prato div textarea {
+    border: 1px solid var(--cor-primaria);
+    border-radius: 10px;
+    padding: 10px;
+}
+.modal-prato div div.botoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 1rem 0;
+    column-gap: 1rem;
+    margin-top: 2rem;
+}
+.modal-prato div div.botoes div {
+    width: 30%;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem .6rem;
+}
+.modal-prato div div.botoes button {
+    width: 38%;
+    padding: 0rem 2rem;
+    background-color: var(--cor-primaria);
+    border: none;
+    border-radius: 10px;
+    color: var(--cor-fonte-botao);
+    font-weight: bold;
+    cursor: pointer;
+}
+.modal-prato div div.botoes div i {
+    color: var(--cor-primaria);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Modal Carrinho */
+.janela-modal-carrinho {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--cor-fundo-modal);
+    display: none;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 999;
+}
+.modal-carrinho {
+    width: 75%;
+    min-width: 450px;
+    min-height: 600px;
+    background-color: var(--cor-principal);
+    padding: 50px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.fechar-carrinho {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--cor-primaria);
+    color: var(--cor-fonte-botao);
+    font-size: 20px;
+    cursor: pointer;
+}
+.janela-modal-carrinho.abrir {
+    display: flex;
+}
+
+.modal-carrinho .info-pedido-1 h4,
+.modal-carrinho .info-pedido-2 h4,
+.modal-carrinho .lista-pedido h4 {
+    font-weight: normal;
+    font-size: 18px;
+}
+.modal-carrinho .info-pedido-1 h4:nth-child(2) {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.modal-carrinho .lista-pedido {
+    display: flex;
+    justify-content: space-between;
+    margin: .8rem 1rem 3rem;
+}
+.modal-carrinho .lista-pedido .remover-item {
+    font-weight: bold;
+    color: rgb(171, 171, 171);
+}
+.modal-carrinho .lista-pedido .remover-item:hover {
+    color: var(--cor-primaria);
+    cursor: pointer;
+}
+.modal-carrinho .info-pedido-2 > div {
+    display: flex;
+    justify-content: space-between;
+    margin: .8rem 1rem;
+}
+.modal-carrinho button.btn-finalizar-pedido {
+    align-self: center;
+    background-color: var(--cor-primaria);
+    padding: 10px 40px;
+    border: none;
+    border-radius: 10px;
+    color: var(--cor-principal);
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 13rem;
+    cursor: pointer;
+}
+
+/* Modal FinalizarPedido */
+.janela-modal-finalizarPedido {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--cor-fundo-modal);
+    display: none;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 999;
+}
+.modal-finalizarPedido {
+    width: 75%;
+    min-width: 450px;
+    min-height: 600px;
+    background-color: var(--cor-principal);
+    padding: 70px 50px 0;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.fechar-finalizarPedido {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--cor-primaria);
+    color: var(--cor-principal);
+    font-size: 20px;
+    cursor: pointer;
+}
+.voltar-finalizarPedido {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    color: var(--cor-titulo-cinza);
+    background-color: transparent;
+}
+.voltar-finalizarPedido:hover {
+    color: var(--cor-primaria);
+    cursor: pointer;
+}
+.janela-modal-finalizarPedido.abrir {
+    display: flex;
+}
+
+.modal-finalizarPedido .info-entrega {
+    display: flex;
+    justify-content: space-between;
+    margin-block: 1rem;
+}
+.modal-finalizarPedido .info-entrega .endereco {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    font-size: 17px;
+}
+.modal-finalizarPedido .info-entrega .endereco i {
+    font-size: 26px;
+    color: var(--cor-primaria);
+}
+.modal-finalizarPedido .info-entrega .endereco h4 {
+    color: var(--cor-titulo-cinza);
+    margin-left: .5rem;
+}
+.modal-finalizarPedido .info-entrega .endereco h4:hover {
+    color: var(--cor-primaria);
+    cursor: pointer;
+}
+
+.modal-finalizarPedido .info-entrega .tipo-entrega {
+    border: 1px solid var(--cor-primaria);
+    border-radius: 8px;
+    padding: 10px;
+    width: 50%;
+}
+.modal-finalizarPedido .info-entrega .tipo-entrega h4 {
+    color: var(--cor-primaria);
+    margin-bottom: .4rem;
+}
+.modal-finalizarPedido .info-entrega .tipo-entrega p {
+    margin-block: .4rem;
+}
+
+.modal-finalizarPedido .formas-pagamento div > label {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--cor-titulo-cinza);
+    border-radius: 10px;
+    padding: 25px 10px;
+    margin: 1.2rem 3rem;
+    cursor: pointer;
+}
+.modal-finalizarPedido .formas-pagamento div > label i {
+    font-size: 45px;
+    margin-inline: 1rem;
+    color: var(--cor-primaria);
+}
+.modal-finalizarPedido .formas-pagamento div > label h2 {
+    font-size: 30px;
+    margin-left: 1rem;
+}
+
+.modal-finalizarPedido .formas-pagamento div > input[type='radio'] {
+    display: none;
+}
+.modal-finalizarPedido .formas-pagamento div > input[type='radio']:checked ~ label {
+    border: 2px solid var(--cor-primaria);
+}
+
+.modal-finalizarPedido .seguir-pagamento {
+    position: absolute;
+    align-self: center;
+    background-color: var(--cor-primaria);
+    padding: 10px 40px;
+    border: none;
+    border-radius: 10px;
+    color: var(--cor-principal);
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    bottom: 2rem;
+}
+
+/* Modal PagamentoComCartão */
+.janela-modal-pagamentoComCartao {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--cor-fundo-modal);
+    display: none;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 999;
+}
+.modal-pagamentoComCartao {
+    width: 75%;
+    min-width: 450px;
+    min-height: 600px;
+    background-color: var(--cor-principal);
+    padding: 70px 50px 0;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.fechar-pagamentoComCartao {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--cor-primaria);
+    color: var(--cor-principal);
+    font-size: 20px;
+    cursor: pointer;
+}
+.janela-modal-pagamentoComCartao.abrir {
+    display: flex;
+}
+
+.modal-pagamentoComCartao .radio-container {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5rem;
+}
+.modal-pagamentoComCartao .radio-custom input[type=radio] {
+    display: none;
+}
+.modal-pagamentoComCartao .radio-custom label {
+    border: 1px solid var(--cor-titulo-cinza);
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-weight: bold;
+    font-size: 26px;
+    cursor: pointer;
+}
+.modal-pagamentoComCartao .radio-custom input[type='radio']:checked ~ label {
+    background-color: var(--cor-primaria);
+    color: var(--cor-fonte-botao);
+}
+
+.modal-pagamentoComCartao form {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.modal-pagamentoComCartao form label {
+    display: flex;
+    flex-direction: column;
+    margin-block: 1rem;
+}
+.modal-pagamentoComCartao form > div {
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+}
+.modal-pagamentoComCartao form > div > label {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    margin-inline: 1rem;
+}
+.modal-pagamentoComCartao form input {
+    padding: 10px;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 8px;
+    font-size: 20px;
+}
+.modal-pagamentoComCartao form button {
+    position: absolute;
+    align-self: center;
+    background-color: var(--cor-primaria);
+    padding: 10px 40px;
+    border: none;
+    border-radius: 10px;
+    color: var(--cor-principal);
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    bottom: 1rem;
 }

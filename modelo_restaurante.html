@@ -20,14 +20,14 @@
             </ul>
         
             <div class="input-container">
-                <i class="bsc-search"></i>
+                <i class="fa-solid fa-magnifying-glass" style="color: rgb(255, 0, 0);"></i>
                 <input type="text" placeholder="Busque por item ou loja">
             </div>
         
             <img src="./avatar/avatar.jpg" alt="Foto do usuário" class="foto-usuario">
         
-            <div class="carrinho">
-                <i class="bsc-shopping-bag"></i>
+            <div class="carrinho" onclick="abrirCarrinho()">
+                <i class="fa-solid fa-bag-shopping" style="font-size: 25px;"></i>
                 <div class="carrinho-info">
                     <span>R$0,00</span><br>
                     <span>0 itens</span>
@@ -53,7 +53,7 @@
                         <h4>NOME DO RESTAURANTE AQUI</h4>
                         <p><span onclick="abrirVerMais()">VER MAIS</span> | Pedido mínimo R$19,00</p>
                         <div class="estrela">
-                            <span><i class="bsc-star-ratings"></i>4,6</span>
+                            <span><i class="fa-solid fa-star" style="color: yellow;"></i>4,6</span>
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
                 <!-- Botões de opções para o usuário -->
                 <div class="botoes">
                     <div class="btn_entrega" onclick="abrirOpcaoDeEntrega()">
-                        <span>Entrega</span>
+                        <span><i class="fa-solid fa-motorcycle"></i> Entrega</span>
                     </div>
                     <div class="btn_agenda">
                         <span>Hoje 55-65</span>
@@ -74,7 +74,7 @@
             <div class="menu">
                 <h2>Refeições</h2>
                 <div class="pratos">
-                    <div>
+                    <div onclick="abrirPrato()">
                         <ul>
                             <li>Nome do prato</li>
                             <li>Descrição do prato</li>
@@ -137,7 +137,7 @@
     <!-- Modal VerMais -->
     <div class="janela-modal" id="janela-modal">
         <div class="modal-vermais">
-            <button class="fechar" id="fechar">X</button>
+            <button class="fechar" id="fechar"><i class="fa-solid fa-xmark" id="fechar"></i></button>
             <ul class="opcoes-modal-vermais">
                 <li id="sobre">SOBRE</li>
                 <li id="horario">HORÁRIO</li>
@@ -195,42 +195,43 @@
                 <h3>Pagamento pelo site</h3>
                 <h4>Débito</h4>
                 <div class="pagamento-debito">
-                    <p>Mastercard</p>
-                    <p>Elo</p>
-                    <p>Visa</p>
+                    <p><i class="fa-brands fa-cc-mastercard"></i> Mastercard</p>
+                    <p><i class="fa-regular fa-credit-card"></i> Elo</p>
+                    <p><i class="fa-brands fa-cc-visa"></i> Visa</p>
                 </div>
                 <h4>Crédito</h4>
                 <div class="pagamento-credito">
-                    <p>Mastercard</p>
-                    <p>Hipercard</p>
-                    <p>Visa</p>
-                    <p>Elo</p>
+                    <p><i class="fa-brands fa-cc-mastercard"></i> Mastercard</p>
+                    <p><i class="fa-regular fa-credit-card"></i> Hipercard</p>
+                    <p><i class="fa-brands fa-cc-visa"></i> Visa</p>
+                    <p><i class="fa-regular fa-credit-card"></i> Elo</p>
                 </div>
                 <h4>PIX</h4>
                 <div class="pagamento-pix">
-                    <p>PIX</p>
+                    <p><i class="fa-brands fa-pix"></i> PIX</p>
                 </div>
                 <h3>Pagamento na entrega</h3>
                 <h4>Débito</h4>
                 <div class="pagamento-debito">
-                    <p>Visa</p>
-                    <p>Mastercard</p>
-                    <p>Elo</p>
+                    <p><i class="fa-brands fa-cc-visa"></i> Visa</p>
+                    <p><i class="fa-brands fa-cc-mastercard"></i> Mastercard</p>
+                    <p><i class="fa-regular fa-credit-card"></i> Elo</p>
                 </div>
                 <h4>Crédito</h4>
                 <div class="pagamento-credito">
-                    <p>Hipercard</p>
-                    <p>Mastercard</p>
-                    <p>Visa</p>
-                    <p>Elo</p>
+                    <p><i class="fa-regular fa-credit-card"></i> Hipercard</p>
+                    <p><i class="fa-brands fa-cc-mastercard"></i> Mastercard</p>
+                    <p><i class="fa-brands fa-cc-visa"></i> Visa</p>
+                    <p><i class="fa-regular fa-credit-card"></i> Elo</p>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Modal OpçãoDeEntrega -->
     <div class="janela-modal-opcaoDeEntrega" id="janela-modal-opcaoDeEntrega">
         <div class="modal-opcaoDeEntrega">
-            <button class="fechar-opcaoDeEntrega" id="fechar-opcaoDeEntrega">X</button>
+            <button class="fechar-opcaoDeEntrega" id="fechar-opcaoDeEntrega"><i class="fa-solid fa-xmark" id="fechar-opcaoDeEntrega"></i></button>
             <h2>Como quer receber seu pedido?</h2>
             <label class="entrega" for="entrega">
                 <label for="entrega">Entrega<br>A gente leva até você.</label>
@@ -246,7 +247,154 @@
         </div>
     </div>
 
-    <script async src="https://basicons.xyz/embed.js"></script>
+    <!-- Modal Prato -->
+    <div class="janela-modal-prato" id="janela-modal-prato">
+        <div class="modal-prato">
+            <button class="fechar-prato" id="fechar-prato"><i class="fa-solid fa-xmark" id="fechar-prato"></i></button>
+            <img src="./imagens/imagesIlustrativa.jfif">
+            <div>
+                <h4 class="nome-receita">Nome da receita</h4>
+                <p class="adicionais">Adicionais</p>
+                <span class="valor">Valor: R$ 99,99</span>
+                <div class="info-restaurante">
+                    <div>
+                        <h4><i class="fa-solid fa-utensils"></i> Nome do restaurante</h4>
+                        <p><i class="fa-solid fa-star" style="color: yellow;"></i>4,6</p>
+                    </div>
+                    <hr>
+                    <div>
+                        <p>Prazo de entrega<br>Aqui</p>
+                        <p>Valor de entrega<br>Aqui</p>
+                    </div>
+                </div>
+                <div class="textarea">
+                    <h4>Algum comentário?</h4>
+                    <h4>0 / 240</h4>
+                </div>
+                <textarea rows="5" placeholder="Ex: Tirar a cebola, maionese à parte, etc..."></textarea>
+                <div class="botoes">
+                    <div><i class="fa-solid fa-minus"></i> 1 <i class="fa-solid fa-plus"></i></div>
+                    <button>Adicionar a sacola<br>R$ 99,99</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Carrinho -->
+    <div class="janela-modal-carrinho" id="janela-modal-carrinho">
+        <div class="modal-carrinho">
+            <button class="fechar-carrinho" id="fechar-carrinho"><i class="fa-solid fa-xmark" id="fechar-carrinho"></i></button>
+            <div class="info-pedido-1">
+                <h4>Seu pedido em</h4>
+                <h4>Nome do restaurante</h4>
+                <h4>Lista do pedido</h4>
+            </div>
+            <hr>
+            <div class="lista-pedido">
+                <h4><span class="remover-item">REMOVER</span> | 1x Pastel de camarão tradicional</h4>
+                <h4>R$ 00,00</h4>
+            </div>
+            <hr>
+            <div class="info-pedido-2">
+                <div>
+                    <h4>Subtotal</h4>
+                    <h4>R$ 00,00</h4>
+                </div>
+                <div>
+                    <h4>Taxa de entrega</h4>
+                    <h4>R$ 00,00</h4>
+                </div>
+            </div>
+            <button class="btn-finalizar-pedido" id="btn-finalizar-pedido">Finalizar pedido</button>
+        </div>
+    </div>
+
+    <!-- Modal Finalizar Pedido -->
+    <div class="janela-modal-finalizarPedido" id="janela-modal-finalizarPedido">
+        <div class="modal-finalizarPedido">
+            <button class="fechar-finalizarPedido" id="fechar-finalizarPedido"><i class="fa-solid fa-xmark" id="fechar-finalizarPedido"></i></button>
+            <button class="voltar-finalizarPedido" id="voltar-finalizarPedido"><i class="fa-solid fa-angles-left"></i> voltar</button>
+            <h3>Finalize seu pedido</h3>
+            <div class="info-entrega">
+                <div class="endereco">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <p>R. Bela Vista, n° 347<br>Natal/RN</p>
+                    <h4>MUDAR</h4>
+                </div>
+                <div class="tipo-entrega">
+                    <h4>Padrão</h4>
+                    <p>Dia de entrega AQUI</p>
+                    <p>Tempo estimado AQUI</p>
+                    <p>R$ valor do frete AQUI</p>
+                </div>
+            </div>
+            <hr>
+            <div class="formas-pagamento">
+                <div>
+                    <input type="radio" name="forma-pagamento" id="pix" checked>
+                    <label for="pix">
+                        <i class="fa-brands fa-pix"></i>
+                        <h2>Pagar com o PIX</h2>
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" name="forma-pagamento" id="cartao">
+                    <label for="cartao">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <h2>Pagar com CARTÃO</h2>
+                    </label>
+                </div>
+            </div>
+            <button class="seguir-pagamento" id="seguir-pagamento">Seguir com o pagamento</button>
+        </div>
+    </div>
+
+    <!-- Modal PagamentoComCartão -->
+    <div class="janela-modal-pagamentoComCartao" id="janela-modal-pagamentoComCartao">
+        <div class="modal-pagamentoComCartao">
+            <button class="fechar-pagamentoComCartao" id="fechar-pagamentoComCartao"><i class="fa-solid fa-xmark"></i></button>
+            <div class="radio-container">
+                <div class="radio-custom">
+                    <input type="radio" name="opcao-cartao" id="debito" checked>
+                    <label for="debito">Débito</label>
+                </div>
+                <div class="radio-custom">
+                    <input type="radio" name="opcao-cartao" id="credito">
+                    <label for="credito">Crédito</label>
+                </div>
+            </div>
+            <form>
+                <label for="numero-cartao">
+                    <span>Número do cartão</span>
+                    <input type="text" inputmode="numeric" id="numero-cartao">
+                </label>
+                <div>
+                    <label for="validade-cartao">
+                        <span>Validade</span>
+                        <input type="text" id="validade-cartao">
+                    </label>
+                    <label for="cvv-cartao">
+                        <span>CVV</span>
+                        <input type="text" id="cvv-cartao">
+                    </label>
+                </div>
+                <label for="nome-titular">
+                    <span>Nome do títular do cartão</span>
+                    <input type="text" id="nome-titular">
+                </label>
+                <label for="cpf-titular">
+                    <span>CPF do títular do cartão</span>
+                    <input type="text" id="cpf-titular">
+                </label>
+                <button>Continuar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FIM DA PÁGINA por enquanto -->
+
     <script src="./scripts/modelo_restaurante.js"></script>
+    <script src="https://kit.fontawesome.com/884606ba7f.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

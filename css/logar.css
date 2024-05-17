@@ -22,8 +22,9 @@ body {
 }
 
 .container {
-    height: 70vh;
-    width: 120vh;
+    height: 75vh;
+    min-height: 400px;
+    width: 70vw;
     background-color: #FDEFE3;
     padding-inline: 10%;
     display: flex;
