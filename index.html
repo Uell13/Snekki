@@ -7,6 +7,7 @@
     <title>oDelivery - Index</title>
 </head>
 <body>
+
     <div class="container">
 
         <header>
@@ -39,49 +40,54 @@
                     <img src="svg/carrinho.svg" width="280px">
                 </div>
             </div>
+
+            <h2>Catálogo de ofertas</h2>
+
+            <div class="slider-oferta">
+
+                <input type="radio" name="radio-slide-ofertas" id="slide-oferta1" checked>
+                <input type="radio" name="radio-slide-ofertas" id="slide-oferta2">
+                <input type="radio" name="radio-slide-ofertas" id="slide-oferta3">
+
+                <label for="slide-oferta1" id="oferta1">
+                    <img src="./imagens/oferta1.jpg" alt="Slide oferta 1">
+                </label>
+                <label for="slide-oferta2" id="oferta2">
+                    <img src="./imagens/oferta2.jpg" alt="Slide oferta 2">
+                </label>
+                <label for="slide-oferta3" id="oferta3">
+                    <img src="./imagens/oferta3.jpg" alt="Slide oferta 3">
+                </label>
+
+            </div>
+
+            <h2>Recomendações</h2>
+
+            <div class="recomendacoes">
+
+                <div class="restaurante" id="primeiro"></div>
+                <div class="restaurante"></div>
+                <div class="restaurante"></div>
+                <div class="restaurante"></div>
+                <div class="restaurante"></div>
+                <div class="restaurante"></div>
+                <div class="restaurante"></div>
+                <div class="restaurante"></div>
+                <div class="restaurante"></div>
+                <div class="restaurante"></div>
+
+                <div class="botao-esquerdo"><i class="fa-regular fa-circle-left" id="esquerda"></i></div>
+                <div class="botao-direito"><i class="fa-regular fa-circle-right" id="direita"></i></div>
+                
+            </div>
+
         </main>
-
-        <section class="slider">
-
-            <div class="titulo">
-                <h2>Ofertas</h2>
-            </div>
-
-            <div class="slide-ofertas">
-
-                <input type="radio" name="radio-slide-ofertas" id="oferta1">
-                <input type="radio" name="radio-slide-ofertas" id="oferta2">
-                <input type="radio" name="radio-slide-ofertas" id="oferta3">
-
-                <div class="slide-box primeiro">
-                    <img src="./imagens/oferta1.jpg" alt="Oferta 1">
-                </div>
-                <div class="slide-box">
-                    <img src="./imagens/oferta2.jpg" alt="Oferta 2">
-                </div>
-                <div class="slide-box">
-                    <img src="./imagens/oferta3.jpg" alt="Oferta 3">
-                </div>
-
-                <div class="nav-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                </div>
-
-                <div class="nav-manual">
-                    <label for="oferta1" class="manual-btn"></label>
-                    <label for="oferta2" class="manual-btn"></label>
-                    <label for="oferta3" class="manual-btn"></label>
-                </div>
-
-            </div>
-        
-        </section>
     
     </div>
 
+
     <script src="./scripts/slide.js"></script>
+    <script src="https://kit.fontawesome.com/884606ba7f.js" crossorigin="anonymous"></script>
 
 </body>
 </html>

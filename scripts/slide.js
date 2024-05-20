@@ -1,7 +1,4 @@
-const radio = document.querySelector('.manual-btn')
 let contador = 1
-
-document.getElementById('oferta1').checked = true
 
 setInterval(() => {
     proximoSlide()
@@ -14,5 +11,24 @@ function proximoSlide() {
         contador = 1
     }
 
-    document.getElementById('oferta' + contador).checked = true
+    document.getElementById('slide-oferta' + contador).checked = true
 }
+
+const primeiro = document.getElementById('primeiro')
+const btnDireito = document.querySelector('#direita')
+const btnEsquerdo = document.querySelector('#esquerda')
+
+let valor = 0
+
+btnDireito.addEventListener('click', (e) => {
+    if (e.target.id == 'direita') {
+        valor -= 10
+        primeiro.style.marginLeft = valor+'%'
+    }
+})
+btnEsquerdo.addEventListener('click', (e) => {
+    if (e.target.id == 'esquerda') {
+        valor += 10
+        primeiro.style.marginLeft = valor+'%'
+    }
+})
