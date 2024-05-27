@@ -3,48 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/cadastro.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="shortcut icon" href="imagens/logomarca.jpg" type="image/x-icon">
+    <title>Cadastro - Snekki</title>
 </head>
 <body>
     <div class="container">
-        <div class="radio-container">
-            <div class="radio-custom">
-                <input type="radio" name="opcao-logar" id="cliente" checked>
-                <label for="cliente">Cliente</label>
-            </div>
-            <div class="radio-custom">
-                <input type="radio" name="opcao-logar" id="parceiro">
-                <label for="parceiro">Parceiro</label>
-            </div>
-        </div>
 
-        <form action="">
-            <input type="text" placeholder="Nome completo">
-            <input type="text" placeholder="CPF">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Senha">
-            <input type="text" placeholder="Confirme a senha">
-            <fieldset>
-                <select name="dia" id="dia">
-                    <option selected disabled>Dia</option>
-                </select>
-                <select name="mes" id="mes">
-                    <option selected disabled>Mês</option>
-                </select>
-                <select name="ano" id="ano">
-                    <option selected disabled>Ano</option>
-                </select>
-            </fieldset>
-            <fieldset>
-                <input type="tel" placeholder="Telefone">
-                <select name="genero" id="genero">
-                    <option selected disabled>Gênero</option>
-                    <option value="masculino">Masculino</option>
-                    <option value="feminino">Feminino</option>
-                </select>
-            </fieldset>
-            <input type="submit" value="Cadastrar">
+        <img src="imagens/logomarca.jpg" alt="Logomarca Snekki" class="logomarca">
+        <h1 class="titulo">Cadastro</h1>
+
+        <form class="form-cadastro">
+
+            <div class="radio-container">
+                <div class="radio-custom">
+                    <input type="radio" name="opcao-logar" id="cliente" checked>
+                    <label for="cliente">Cliente</label>
+                </div>
+                <div class="radio-custom">
+                    <input type="radio" name="opcao-logar" id="parceiro">
+                    <label for="parceiro">Parceiro</label>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <label for="nome-usuario">Nome completo<span class="item-requerido">*</span></label>
+                <input type="text" name="nome-usuario" id="nome-usuario" autofocus>
+            </div>
+
+            <div class="form-item">
+                <label for="cpf-usuario">CPF<span class="item-requerido">*</span></label>
+                <input type="text" name="cpf-usuario" id="cpf-usuario">
+            </div>
+
+            <div class="form-item">
+                <label for="email-usuario">Email<span class="item-requerido">*</span></label>
+                <input type="text" name="email-usuario" id="email-usuario">
+            </div>
+            
+            <div class="form-item">
+                <div class="senha-usuario">
+                    <label for="senha-usuario">Senha<span class="item-requerido">*</span></label>
+                    <input type="password" name="senha-usuario" id="senha-usuario">
+                </div>
+                <div class="repetir-senha-usuario">
+                    <label for="repetir-senha-usuario">Confirme a senha<span class="item-requerido">*</span></label>
+                    <input type="password" name="repetir-senha-usuario" id="repetir-senha-usuario">
+                </div>
+            </div>
+
+            <div class="form-item">
+                <label for="telefone-usuario">Número do telefone<span class="item-requerido">*</span></label>
+                <input type="text" name="telefone-usuario" id="telefone-usuario">
+            </div>
+
+            <div class="form-item">
+                <label>Data de nascimento<span class="item-requerido">*</span></label>
+                <div class="dia-nascimento">
+                    <input type="text" name="dia-nascimento" id="dia-nascimento" placeholder="Dia">
+                </div>
+                <div class="mes-nascimento">
+                    <input type="text" name="mes-nascimento" id="mes-nascimento" placeholder="Mês">
+                </div>
+                <div class="ano-nascimento">
+                    <input type="text" name="ano-nascimento" id="ano-nascimento" placeholder="Ano">
+                </div>
+            </div>
+
+            <div class="form-item">
+                <label for="genero-opcao">Gênero<span class="item-requerido">*</span></label>
+                <div class="radio-inputs">
+                    <input type="radio" name="genero" id="masculino" value="masculino">
+                    <label for="masculino" class="radio-opcao">
+                        <span class="radio-custom-genero"></span>
+                        <label for="masculino">Masculino</label>
+                    </label>
+                    <input type="radio" name="genero" id="feminino" value="feminino">
+                    <label for="feminino" class="radio-opcao">
+                        <span class="radio-custom-genero"></span>
+                        <label for="feminino">Feminino</label>
+                    </label>
+                    <input type="radio" name="genero" id="personalizado" value="personalizado">
+                    <label for="personalizado" class="radio-opcao">
+                        <span class="radio-custom-genero"></span>
+                        <label for="personalizado">Personalizado</label>
+                    </label>
+                </div>
+            </div>
+
+            <hr>
+
+            <button type="submit" class="btn-submit">Cadastrar</button>
+
         </form>
     </div>
 </body>

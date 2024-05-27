@@ -2,150 +2,191 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 body {
+    background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 237, 0));
+    width: 100vw;
     min-height: 100vh;
-    background-image: linear-gradient(to right, #FF0000, #FFED00);
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
-
-.logo {
-    position: absolute;
-    top: 0;
-    font-size: 70px;
-    color: #FFFFFF;
-    font-family: Tahoma;
-}
-
 .container {
-    height: 75vh;
-    min-height: 400px;
-    width: 70vw;
-    background-color: #FDEFE3;
-    padding-inline: 10%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 5em;
+    background-color: rgb(253, 239, 227);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 .5rem;
+    border-radius: .5rem;
 }
 
-/* Botões de opção de login, CLIENTE OU PARCEIRO */
+/* Logomarca Snekki */
+.logomarca {
+    width: 8.5rem;
+    border-radius: .5rem;
+    display: block;
+    margin: 1.5rem auto .5rem;
+}
+
+/* Titulo da página */
+.titulo {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin: 1rem 5rem 2rem;
+    position: relative;
+    cursor: default;
+}
+.titulo::after {
+    content: '';
+    display: block;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 5rem;
+    width: 35px;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Input Radio Customizado */
 .radio-container {
     display: flex;
     justify-content: center;
-    column-gap: 2.5em;
-    margin: 3.5em 0 4em;
+    column-gap: 2em;
+    margin-bottom: 2rem;
 }
 .radio-custom input[type=radio] {
     display: none;
 }
 .radio-custom label {
-    border: 2px solid #FF0505;
-    border-radius: 30px;
-    padding: 10px 24px;
-    font-weight: bold;
-    font-size: 30px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 10rem;
+    padding: .5rem 1rem;
+    font-weight: 600;
+    font-size: 1.8rem;
     cursor: pointer;
 }
-.radio-custom input[type=radio]:checked ~ label {
-    color: red;
-    background-image: linear-gradient(to right, #FF0000, #FFED00);
-    color: #FFFFFF;
+.radio-custom input[type=radio]:checked~label {
+    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 238, 0));
+    color: rgb(255, 255, 255);
 }
 
-/* Inputs dos dados do usuário, email e senha customizados (deu um bugzinho mas depois eu arrumo) */
-.input-custom input {
+/* Estilizando o formulário de login */
+.form-login label {
+    color: rgb(85, 85, 85);
+}
+.form-login input[type='text'],
+.form-login input[type='password'] {
     width: 100%;
-    padding: 12px 18px;
-    font-size: 20px;
-    border: 2px solid #FF0505;
-    border-radius: 10px;
-    background-color: #FDEFE3;
+    padding: .3rem .5rem;
+    border: 0;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin-block: .5rem;
+    background-color: transparent;
+    font-size: 1.2rem;
 }
-.input-custom {
+.form-login input[type='text']:focus,
+.form-login input[type='password']:focus {
+    outline: 0;     
+}
+
+/* Definindo margins para o formulário */
+.form-login {
+    margin: 0 1rem;
+    padding: 0 2rem 2rem;
+}
+
+/* Input customizado animado */
+.form-login .form-item {
+    margin-top: 1rem;
     position: relative;
-    margin-bottom: 1em;
 }
-.input-custom:nth-child(1) {
-    margin-bottom: 2.3em;
-}
-.input-custom label {
+.form-login .form-item label {
+    font-size: 1.2rem;
     position: absolute;
-    font-size: 18px;
-    left: 1.2em;
-    bottom: .9em;
-    transition: all .3s ease;
+    left: .5rem;
+    top: .8rem;
+    cursor: text;
+    transition: .2s;
+}
+.form-login .form-item input:focus ~ label,
+.form-login .form-item input:valid ~ label {
+    top: -.7rem;
 }
 
-.input-custom input:focus {
-    outline: none;
-}
-.input-custom input:focus ~ label,
-.input-custom input:valid ~ label
-{
-    font-size: 22px;
-    transform: translate(0, -1em);
-    background-color: #FDEFE3;
-    padding: 0 10px;
-    border-left: 2px solid #FF0505;
-    border-right: 2px solid #FF0505;
+/* Link esqueceu a senha */
+.form-login .esqueceu-senha {
+    margin-left: 1.5rem;
 }
 
-form a {
-    text-decoration: none;
-    font-size: 20px;
-    margin: 0 1em;
-}
-
-.continuar {
-    font-size: 26px;
-    margin: 1em 0;
+/* Lista para logar utilizando uma rede social */
+.form-login .login-social {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    column-gap: 1em;
+    gap: .5rem;
+    list-style: none;
+    margin: 1rem 1rem 1rem 0;
+    font-size: 1.5rem;
+    cursor: default;
 }
-.continuar img {
-    width: 50px;
-    padding: 6px;
+.form-login .login-social li a {
+    font-size: 2.2rem;
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    cursor: pointer;
 }
-.continuar img:hover {
-    background-image: linear-gradient(to right, #FF0000, #FFED00);
-    border-radius: 50%;
+.form-login .login-social li a:hover {
+    color: rgba(255, 0, 0, 0.7);
+}
+
+.form-login hr {
+    border: 0;
+    border-bottom: 1px solid rgb(255, 0, 0);
+    margin-block: 1rem;
+    position: relative;
+}
+
+/* Botão de entrar */
+.form-login .btn-submit {
+    display: block;
+    margin: auto;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: .8rem 3rem;
+    border: 0;
+    border-radius: 5rem;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
-.container-button {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1em;
+.container .cadastrar {
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
-.container-button hr {
-    padding: .3px;
-    background-color: #FF0505;
-    border-left: 10px solid #FF0505;
-    border-right: 10px solid #FF0505;
+.container .cadastrar h3 {
+    color: rgb(85, 85, 85);
+    font-weight: 100;
+    cursor: default;
 }
-.container-button input[type=submit] {
-    font-size: 34px;
-    font-weight: bold;
-    color: #FFFFFF;
-    background-color: #FF0505;
-    padding: 10px 50px;
-    border: 1px solid transparent;
-    border-radius: 30px;
-    align-self: center;
-    cursor: pointer;
-}
-
-.container .cadastro {
-    align-self: center;
-    margin-top: 2em;
-}
-.container > span, a {
+.container .cadastrar h3 a {
     text-decoration: none;
-    font-size: 22px;
+}
+
+@media screen and (max-width: 510px) {
+    .form-login .esqueceu-senha {
+        margin-left: .5rem;
+    }
+    .form-login .login-social {
+        font-size: 1rem;
+        margin: 2rem 0;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 350px) {
+    .form-login .login-social {
+        gap: 0;
+    }
+    .form-login .login-social li a {
+        font-size: 1.5rem;
+    }
 }

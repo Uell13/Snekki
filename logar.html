@@ -3,51 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/logar.css">
-    <title>oDelivery - Logar</title>
+    <link rel="stylesheet" href="css/logar.css">
+    <link rel="shortcut icon" href="imagens/logomarca.jpg" type="image/x-icon">
+    <title>Logar - Snekki</title>
 </head>
 <body>
-    <div class="logo">
-        <h1>oDelivery</h1>
-    </div>
     <div class="container">
-        <div class="radio-container">
-            <div class="radio-custom">
-                <input type="radio" name="opcao-logar" id="cliente" checked>
-                <label for="cliente">Cliente</label>
-            </div>
-            <div class="radio-custom">
-                <input type="radio" name="opcao-logar" id="parceiro">
-                <label for="parceiro">Parceiro</label>
-            </div>
-        </div>
-        <form action="" method="post">
-            <div class="dados">
-                <div class="input-custom">
-                    <input type="text" inputmode="email" id="custom-input-email" required>
-                    <label for="custom-input-email">Digite seu Email</label>
+
+        <img src="imagens/logomarca.jpg" alt="Logomarca Snekki" class="logomarca">
+        <h1 class="titulo">Logar</h1>
+
+        <form class="form-login">
+
+            <div class="radio-container">
+                <div class="radio-custom">
+                    <input type="radio" name="opcao-logar" id="cliente" checked>
+                    <label for="cliente">Cliente</label>
                 </div>
-                <div class="input-custom">
-                    <input type="password" id="custom-input-password" required>
-                    <label for="custom-input-password">Digite sua Senha</label>
+                <div class="radio-custom">
+                    <input type="radio" name="opcao-logar" id="parceiro">
+                    <label for="parceiro">Parceiro</label>
                 </div>
             </div>
-            <a href="#">Esqueceu a senha?</a>
-            <div class="continuar">
-                <span>Continuar com: </span>
-                <img src="svg/google_6424087.svg" width="50px">
-                <img src="svg/facebook_6422199.svg" width="50px">
-                <img src="svg/apple_6424299.svg" width="50px">
+
+            <div class="form-item">
+                <input type="text" name="email" id="email" required autocomplete="off" autofocus>
+                <label for="email">Digite seu email</label>
             </div>
-            <div class="container-button">
-                <hr>
-                <input type="submit" value="Entrar">
+
+            <div class="form-item">
+                <input type="password" name="senha" id="senha" required>
+                <label for="senha">Digite sua senha</label>
             </div>
+
+            <div class="esqueceu-senha">
+                <a href="#">Esqueceu a senha?</a>
+            </div>
+
+            <ul class="login-social">
+                <li>Continuar com:</li>
+                <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-apple"></i></a></li>
+            </ul>
+
+            <hr>
+
+            <button type="submit" class="btn-submit">Entrar</button>
+
         </form>
-        <div class="cadastro">
-            <span>Não possui uma conta? </span>
-            <a href="./cadastro.html">Cadastre-se aqui!</a>
+
+        <div class="cadastrar">
+            <h3>Não possui uma conta? <a href="#">Cadastre-se aqui!</a></h3>
         </div>
+
     </div>
+
+    <script src="https://kit.fontawesome.com/884606ba7f.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modelo - Navbar Responsiva</title>
   <style>
-
     /* Zerando as propriedades do html */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navbar-desktop {
+      display: none;
     }
 
     /* Tamanho da logomarca */
@@ -25,6 +29,7 @@
       display: none;
       flex-direction: column;
     }
+
     .menu.active {
       display: flex;
     }
@@ -36,12 +41,14 @@
       align-items: center;
       margin-top: .8rem;
     }
+
     .logomarca i {
       font-size: 30px;
       padding: 10px;
       border-radius: 50%;
       cursor: pointer;
     }
+
     .logomarca i:hover {
       background-color: rgb(230, 230, 230);
     }
@@ -53,9 +60,11 @@
       padding: 8px;
       margin-top: 1rem;
     }
+
     .input-pesquisa i {
       color: rgb(255, 60, 60);
     }
+
     .input-pesquisa input[type='search'] {
       outline: none;
       border: none;
@@ -71,6 +80,7 @@
       margin-top: 1rem;
       width: 100%;
     }
+
     .nav-menu .nav-item a {
       display: block;
       text-decoration: none;
@@ -78,6 +88,7 @@
       text-align: center;
       padding-block: 15px;
     }
+
     .nav-menu .nav-item a:hover {
       background-color: rgb(255, 60, 60);
       color: rgb(255, 255, 255);
@@ -87,6 +98,7 @@
       align-self: center;
       margin-top: 1.5rem;
     }
+
     .btns-deslogado button {
       padding: 10px 30px;
       border: 1.3px solid rgb(255, 60, 60);
@@ -95,86 +107,407 @@
       font-size: 18px;
       cursor: pointer;
     }
+
     .btns-deslogado .btn-logar {
       margin-left: 1rem;
       background-color: rgb(255, 60, 60);
       color: rgb(255, 255, 255);
+      transition: .3s;
     }
+
     .btns-deslogado .btn-logar:hover {
       background-color: rgb(255, 0, 0);
     }
+
     /* Fim da estilização da navbar */
 
-    @media screen and (min-width: 1440px) {
-      
-      /* Trazendo os elementos de volta */
-      #hamburguer {
+    @media screen and (min-width: 1000px) {
+
+      /* Fazendo a navbar mobile sumir */
+      .navbar-mobile {
         display: none;
       }
-      .menu {
-        background-color: aqua;
-        width: 80vw;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-      }
 
-      .logomarca {
-        width: 10vw;
-        padding: 0;
-        margin: 0;
-      }
-
-      .navbar {
-        background-color: blueviolet;
-        display: flex;
-        justify-content: center;
-      }
-
-      .nav-menu {
-        margin: 0;
-        order: 1;
-        display: inline-flex;
-        column-gap: 1rem;
-        align-self: normal;
-      }
-      .nav-menu .nav-item a:hover {
-        color: rgb(255, 60, 60);
-        background-color: transparent;
-        text-decoration: underline;
-      }
-
-      .input-pesquisa {
-        margin: 0;
-        order: 2;
+      .navbar-desktop {
         display: flex;
         align-items: center;
-        align-self: normal;
-      }
-      .input-pesquisa input[type='search'] {
-        margin-left: 2px;
+        justify-content: space-evenly;
+        margin-inline: 1rem;
+        height: 14vh;
       }
 
-      .btns-deslogado {
-        margin: 0;
-        order: 3;
+      /* Definindo o tamanho da logomarca */
+      .navbar-desktop .logomarca-desktop img {
+        width: 90px;
+        border-radius: 50%;
+      }
+
+      /* Menu de navegação do desktop */
+      .navbar-desktop .nav-menu-desktop {
+        display: inline-flex;
+        column-gap: 3rem;
+        list-style: none;
+      }
+      .navbar-desktop .nav-menu-desktop .nav-item a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 18px;
+        transition: .3s;
+      }
+      .navbar-desktop .nav-menu-desktop .nav-item a:hover {
+        color: rgb(255, 60, 60);
+      }
+
+      /* Input custom da navegação desktop */
+      .input-pesquisa-desktop {
         display: flex;
-        align-self: normal;
+        align-items: center;
+        border: 1.8px solid rgb(255, 60, 60);
+        border-radius: 6px;
+        padding: 8px;
+        width: 30%;
       }
-      .btns-deslogado button {
-        padding: 10px;
-        width: 150px;
+      .input-pesquisa-desktop i {
+        color: rgb(255, 60, 60);
+      }
+      .input-pesquisa-desktop input[type='search'] {
+        border: none;
+        outline: none;
+        font-size: 18px;
+        padding-left: 2px;
+        background-color: transparent;
+        width: 100%;
       }
 
+      .btns-deslogado-desktop button {
+        padding: 10px 30px;
+        border: 1.3px solid rgb(255, 60, 60);
+        border-radius: 10px;
+        background-color: transparent;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      .btns-deslogado-desktop .btn-logar {
+        background-color: rgb(255, 60, 60);
+        color: rgb(255, 255, 255);
+        transition: .3s;
+      }
+      .btns-deslogado-desktop .btn-logar:hover {
+        background-color: rgb(255, 0, 0);
+      }
+
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .container {
+      width: 95%;
+      align-self: center;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container h1 {
+      font-size: 3rem;
+      width: 60%;
+    }
+
+    /* Input Custom - Endereço de entrega */
+    .container .input-custon #input-endereco {
+      width: 50vw;
+      min-width: 350px;
+      border-radius: 6px;
+      border: 1px solid rgb(255, 60, 60);
+      padding: 8px 13px;
+      font-size: 18px;
+      background-color: transparent;
+      text-align: center;
+      margin-top: 12%;
+    }
+    .container .input-custon #input-endereco:focus {
+      outline: none;
+    }
+    .container .input-custon {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .container .input-custon label {
+      position: absolute;
+      bottom: 8px;
+      font-size: 18px;
+      transition: all .5s ease;
+      align-self: center;
+      cursor: text;
+    }
+    .container .input-custon #input-endereco:focus ~ label,
+    .container .input-custon #input-endereco:valid ~ label {
+      transform: translateY(2.3em);
+    }
+
+    .container .botoes {
+      margin-top: 6%;
+      padding-bottom: 2.5rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 5vw;
+    }
+    .container .botoes > div {
+      z-index: 0;
+      background-image: linear-gradient(to right, rgb(255, 218, 70), rgb(255, 206, 0));
+      min-width: 320px;
+      min-height: 280px;
+      border-radius: 30px;
+      position: relative;
+      cursor: default;
+      transition: .3s;
+    }
+    .container .botoes > div:hover {
+      transform: scale(1.1);
+    }
+
+    .container .botoes h2 {
+      margin-top: 3%;
+      text-align: center;
+      font-size: 3.8cqmax;
+      color: #FFFFFF;
+    }
+    .container .botoes div > img {
+      z-index: -1;
+      width: 250px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 5px;
+    }
+    .container .botoes div > button {
+      width: 220px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-size: 22px;
+      font-weight: bold;
+      margin: 30px 10px;
+      padding-block: 10px;
+      border: 1px solid transparent;
+      border-radius: 30px;
+      background-color: #FF0505;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+
+    /* Slider Ofertas */
+
+    .container-slider {
+      width: 95%;
+      align-self: center;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container-slider h2 {
+      color: rgb(110, 110, 110);
+      align-self: flex-start;
+      font-size: 2.5rem;
+      margin: 8rem 0 1rem 10%;
+    }
+
+    .slider-oferta {
+      position: relative;
+      width: 50%;
+      height: 32vw;
+      margin: 50px auto;
+      transform-style: preserve-3d;
+      perspective: 1400px;
+      align-self: center;
+    }
+
+    .slider-oferta input[type='radio'] {
+      display: none;
+    }
+
+    .slider-oferta label,
+    .slider-oferta label img {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 400ms ease;
+    }
+
+    /* Slide Ativo */
+    #slide-oferta1:checked ~ #oferta1,
+    #slide-oferta2:checked ~ #oferta2,
+    #slide-oferta3:checked ~ #oferta3 {
+      transform: translate3d(0%, 0, 200px);
+    }
+
+    /* Próximo Slide */
+    #slide-oferta1:checked ~ #oferta2,
+    #slide-oferta2:checked ~ #oferta3,
+    #slide-oferta3:checked ~ #oferta1 {
+      transform: translate3d(50%, 0, -100px);
+      opacity: .8;
+    }
+
+    /* Slide Anterior */
+    #slide-oferta1:checked ~ #oferta3,
+    #slide-oferta2:checked ~ #oferta1,
+    #slide-oferta3:checked ~ #oferta2 {
+      transform: translate3d(-50%, 0, -100px);
+      opacity: .8;
+    }
+
+    /* Fim do Slider Ofertas */
+
+    /* Recomendações */
+    .container-recomendacoes h2 {
+      color: rgb(110, 110, 110);
+      align-self: flex-start;
+      font-size: 2.5rem;
+      margin: 8rem 0 1rem 10%;
+    }
+
+    .container-recomendacoes {
+      overflow: hidden;
+    }
+    .container-recomendacoes .recomendacoes {
+      width: 500%;
+      display: flex;
+      align-self: flex-start;
+      column-gap: 2rem;
+      margin: 2rem 0 10rem 5rem;
+    }
+    .container-recomendacoes .recomendacoes > div.restaurante {
+      width: 200px;
+      height: 200px;
+      border: 1px solid red;
+      border-radius: 50%;
+      transition: .3s;
+      opacity: .8;
+      cursor: pointer;
+    }
+    .container-recomendacoes .recomendacoes > div.restaurante:hover {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+
+    /* Botão Esquerdo */
+    .container-recomendacoes .recomendacoes div.botao-esquerdo {
+      position: absolute;
+      align-self: center;
+      left: 0;
+    }
+
+    /* Botão Direito */
+    .container-recomendacoes .recomendacoes div.botao-direito {
+      position: absolute;
+      align-self: center;
+      right: 0;
+    }
+
+    .container-recomendacoes .recomendacoes div.botao-esquerdo i,
+    .container-recomendacoes .recomendacoes div.botao-direito i {
+      padding: 100px 50px;
+      font-size: 60px;
+      opacity: .4;
+    }
+
+    .container-recomendacoes .recomendacoes div.botao-esquerdo i:hover,
+    .container-recomendacoes .recomendacoes div.botao-direito i:hover {
+      transform: scale(1.1);
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 910px) {
+      .container .botoes {
+        row-gap: 2rem;
+        margin-top: 5rem;
+      }
+      footer {
+        flex-direction: column;
+      }
+      footer div {
+        align-self: center;
+        width: 50%;
+      }
+    }
+
+    footer {
+      background-color: rgb(255, 60, 60);
+      min-height: 30vh;
+      padding-top: 8vh;
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      column-gap: 5rem;
+      font-size: 20px;
+    }
+
+    footer div ul {
+      list-style: none;
+    }
+
+    footer div h5 {
+      font-size: 24px;
+      margin-bottom: 1rem;
+    }
+
+    footer div:nth-child(1) ul li,
+    footer div:nth-child(2) ul li {
+      margin-bottom: 1rem;
+    }
+
+    footer div:nth-child(1) ul li a,
+    footer div:nth-child(2) ul li a {
+      text-decoration: none;
+      color: rgb(40, 40, 40);
+    }
+    footer div:nth-child(1) ul li a:hover,
+    footer div:nth-child(2) ul li a:hover {
+      color: rgb(255, 255, 255);
+    }
+
+    footer .social ul {
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+      font-size: 40px;
+    }
+    footer .social ul a {
+      text-decoration: none;
+      color: rgb(40, 40, 40);
+    }
+    footer .social ul a:hover {
+      color: rgb(255, 255, 255);
     }
 
   </style>
 </head>
+
 <body>
-  
+
   <header>
-    <nav class="navbar">
-      
+
+    <!-- Navegação Mobile -->
+    <nav class="navbar-mobile">
+
       <div class="logomarca">
         <img src="./imagens/logo.png" alt="Logomarca">
         <i class="fa-solid fa-bars hamburguer" id="hamburguer"></i>
@@ -195,10 +528,139 @@
           <button class="btn-logar">Entrar</button>
         </div>
       </div>
-      
+
     </nav>
+
+    <!-- Navegação Desktop -->
+    <nav class="navbar-desktop">
+
+      <div class="logomarca-desktop">
+        <img src="./imagens/logo.png" alt="Logomarca">
+      </div>
+      <ul class="nav-menu-desktop">
+        <li class="nav-item"><a href="#">Início</a></li>
+        <li class="nav-item"><a href="#">Restaurantes</a></li>
+        <li class="nav-item"><a href="#">Mercados</a></li>
+      </ul>
+      <div class="input-pesquisa-desktop">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" name="pesquisa" id="pesquisa">
+      </div>
+      <div class="btns-deslogado-desktop">
+        <button class="btn-cadastrar">Criar conta</button>
+        <button class="btn-logar">Entrar</button>
+      </div>
+
+    </nav>
+
   </header>
 
+  <main>
+
+    <section class="container">
+
+      <h1>O que você precisa está aqui. Peça e receba onde estiver.</h1>
+
+      <div class="input-custon">
+        <input type="text" id="input-endereco" required>
+        <label for="input-endereco">Endereço de entrega</label>
+      </div>
+
+      <div class="botoes">
+        <div class="restaurantes">
+          <h2>Restaurantes</h2>
+          <button>Ver opções »</button>
+          <img src="svg/hamburguer.svg">
+        </div>
+        <div class="mercados">
+          <h2>Mercados</h2>
+          <button>Buscar lojas »</button>
+          <img src="svg/carrinho.svg" width="280px">
+        </div>
+      </div>
+
+    </section>
+
+    <section class="container-slider">
+
+      <h2>Catálogo de ofertas</h2>
+
+      <div class="slider-oferta">
+      
+        <input type="radio" name="radio-slide-ofertas" id="slide-oferta1" checked>
+        <input type="radio" name="radio-slide-ofertas" id="slide-oferta2">
+        <input type="radio" name="radio-slide-ofertas" id="slide-oferta3">
+      
+        <label for="slide-oferta1" id="oferta1">
+          <img src="./imagens/oferta1.jpg" alt="Slide oferta 1">
+        </label>
+        <label for="slide-oferta2" id="oferta2">
+          <img src="./imagens/oferta2.jpg" alt="Slide oferta 2">
+        </label>
+        <label for="slide-oferta3" id="oferta3">
+          <img src="./imagens/oferta3.jpg" alt="Slide oferta 3">
+        </label>
+      
+      </div>
+
+    </section>
+
+    <section class="container-recomendacoes">
+
+      <h2>Recomendações</h2>
+
+      <div class="recomendacoes">
+      
+        <div class="restaurante" id="primeiro"></div>
+        <div class="restaurante"></div>
+        <div class="restaurante"></div>
+        <div class="restaurante"></div>
+        <div class="restaurante"></div>
+        <div class="restaurante"></div>
+        <div class="restaurante"></div>
+        <div class="restaurante"></div>
+        <div class="restaurante"></div>
+        <div class="restaurante"></div>
+      
+        <div class="botao-esquerdo"><i class="fa-regular fa-circle-left" id="esquerda"></i></div>
+        <div class="botao-direito"><i class="fa-regular fa-circle-right" id="direita"></i></div>
+      
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="contato">
+      <h5>Snekki</h5>
+      <ul>
+        <li><a href="#">Fale conosco</a></li>
+      </ul>
+    </div>
+
+    <div class="descubra">
+      <h5>Descubra</h5>
+      <ul>
+        <li><a href="#">Cadastre seu restaurante</a></li>
+        <li><a href="#">Cadastre-se como parceiro</a></li>
+      </ul>
+    </div>
+    
+    <div class="social">
+      <h5>Social</h5>
+      <ul>
+        <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook"></i></a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-twitter"></i></a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
+      </ul>
+    </div>
+
+  </footer>
+
+  <script src="./scripts/slide.js"></script>
   <script src="https://kit.fontawesome.com/884606ba7f.js" crossorigin="anonymous"></script>
   <script>
 
@@ -207,7 +669,7 @@
 
     btnHamburguer.addEventListener('click', (e) => {
       menu.classList.toggle('active')
-      
+
       if (btnHamburguer.classList.contains('fa-bars')) {
         btnHamburguer.classList.replace('fa-bars', 'fa-xmark')
       } else {
@@ -219,4 +681,5 @@
   </script>
 
 </body>
+
 </html>
