@@ -154,6 +154,19 @@
         font-size: 18px;
         transition: .3s;
       }
+
+      .navbar-desktop .nav-menu-desktop .nav-item a::after {
+        content: '';
+        display: block;
+        width: 0;
+        border-bottom: 2px solid rgb(255, 60, 60);
+        border-radius: 5rem;
+        transition: .3s;
+      }
+      .navbar-desktop .nav-menu-desktop .nav-item a:hover::after {
+        width: 100%;
+      }
+
       .navbar-desktop .nav-menu-desktop .nav-item a:hover {
         color: rgb(255, 60, 60);
       }
@@ -391,7 +404,7 @@
       display: flex;
       align-self: flex-start;
       column-gap: 2rem;
-      margin: 2rem 0 10rem 5rem;
+      margin: 2rem 0 10rem 8.5rem;
     }
     .container-recomendacoes .recomendacoes > div.restaurante {
       width: 200px;
@@ -496,6 +509,61 @@
     }
     footer .social ul a:hover {
       color: rgb(255, 255, 255);
+    }
+
+    /* Janela Modal Endereço */
+    .janela-modal-endereco {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgb(0, 0, 0, .65);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-endereco {
+      width: 100%;
+      max-width: 600px;
+      min-height: 60vh;
+      background-color: rgb(253, 239, 227);
+      margin: .5rem;
+      padding: 1rem;
+      border-radius: 1rem;
+      position: relative;
+    }
+    .fechar-modal-endereco {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: none;
+      background-color: rgb(255, 0, 0);
+      color: rgb(255, 255, 255);
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .modal-endereco .header {
+      text-align: center;
+    }
+    .modal-endereco .header img {
+      width: 8rem;
+      border-radius: .5rem;
+    }
+    .modal-endereco .header h2 {
+      font-weight: 500;
+      margin-block: .5rem;
+    }
+
+    .modal-endereco .main {
+      text-align: center;
+    }
+    .modal-endereco .main .input-item {
+      width: 100%;
     }
 
   </style>
@@ -659,6 +727,40 @@
     </div>
 
   </footer>
+
+
+  <!-- Modal Endereço -->
+  <div class="janela-modal-endereco" id="janela-modal-endereco">
+    <div class="modal-endereco">
+      <button class="fechar-modal-endereco" id="fechar-modal-endereco">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="header">
+        <img src="/imagens/logomarca.jpg" alt="Logomarca Snekki">
+        <h2>Aonde você quer receber seu pedido?</h2>
+      </div>
+
+      <div class="main">
+        <div class="input-item">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" name="cep" id="cep" placeholder="Digite o CEP">
+        </div>
+        <button class="input-item">
+          <i class="fa-solid fa-location-dot"></i>
+          Usar minha localização
+        </button>
+      </div>
+
+      <div class="footer">
+        <h4>Já tem um endereço salvo?</h4>
+        <p>Entre na sua conta para selecionar seu endereço.</p>
+        <p><a href="#">Entrar</a> ou <a href="#">cadastrar</a></p>
+      </div>
+
+    </div>
+  </div>
+
 
   <script src="./scripts/slide.js"></script>
   <script src="https://kit.fontawesome.com/884606ba7f.js" crossorigin="anonymous"></script>

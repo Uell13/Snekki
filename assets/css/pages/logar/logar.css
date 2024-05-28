@@ -113,8 +113,10 @@ body {
 }
 
 /* Link esqueceu a senha */
-.form-login .esqueceu-senha {
+.form-login .esqueceu-senha a {
     margin-left: 1.5rem;
+    text-decoration: none;
+    color: rgb(255, 0, 0);
 }
 
 /* Lista para logar utilizando uma rede social */
@@ -170,6 +172,7 @@ body {
 }
 .container .cadastrar h3 a {
     text-decoration: none;
+    color: rgb(255, 0, 0);
 }
 
 @media screen and (max-width: 510px) {

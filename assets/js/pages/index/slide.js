@@ -22,13 +22,17 @@ let valor = 0
 
 btnDireito.addEventListener('click', (e) => {
     if (e.target.id == 'direita') {
-        valor -= 10
-        primeiro.style.marginLeft = valor+'%'
+        if (valor > -17) {
+            valor -= 2
+            primeiro.style.marginLeft = valor+'%'
+        }
     }
 })
 btnEsquerdo.addEventListener('click', (e) => {
     if (e.target.id == 'esquerda') {
-        valor += 10
-        primeiro.style.marginLeft = valor+'%'
+        if (valor <= -1) {
+            valor += 2
+            primeiro.style.marginLeft = valor+'%'
+        }
     }
 })

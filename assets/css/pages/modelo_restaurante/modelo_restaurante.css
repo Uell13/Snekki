@@ -171,8 +171,9 @@ section .menu .pratos {
 }
 
 section .menu .pratos div > img {
-    width: 40%;
+    width: 200px;
     height: 90%;
+    border-radius: 1rem;
 }
 section .menu .pratos div {
     display: flex;
@@ -453,6 +454,7 @@ section .menu .pratos div ul li:nth-child(4) {
     width: 100%;
 }
 .modal-prato img {
+    width: 450px;
     border-radius: 3px;
     -webkit-box-shadow: -4px 6px 8px -1px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: -4px 6px 8px -1px rgba(0, 0, 0, 0.6);
