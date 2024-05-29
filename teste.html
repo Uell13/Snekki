@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/image/global/logomarca.jpg" type="image/x-icon">
   <title>Modelo - Navbar Responsiva</title>
   <style>
     /* Zerando as propriedades do html */
@@ -519,14 +520,13 @@
       top: 0;
       left: 0;
       background-color: rgb(0, 0, 0, .65);
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
     }
     .modal-endereco {
       width: 100%;
       max-width: 600px;
-      min-height: 60vh;
       background-color: rgb(253, 239, 227);
       margin: .5rem;
       padding: 1rem;
@@ -546,9 +546,13 @@
       font-size: 20px;
       cursor: pointer;
     }
+    .janela-modal-endereco.open {
+      display: flex;
+    }
 
     .modal-endereco .header {
       text-align: center;
+      margin-top: 1rem;
     }
     .modal-endereco .header img {
       width: 8rem;
@@ -556,14 +560,71 @@
     }
     .modal-endereco .header h2 {
       font-weight: 500;
-      margin-block: .5rem;
+      margin-block: 1rem;
     }
 
     .modal-endereco .main {
-      text-align: center;
+      width: 50%;
+      margin: 2.5rem auto;
     }
-    .modal-endereco .main .input-item {
+    
+    .modal-endereco .main .input-item:nth-child(1) i {
+      color: rgb(255, 60, 60);
+      font-size: 1.5rem;
+      margin-inline: 1rem;
+    }
+    .modal-endereco .main .input-item input {
       width: 100%;
+      font-size: 1.2rem;
+      border: 0;
+      outline: 0;
+      background-color: transparent;
+    }
+    .modal-endereco .main .input-item:nth-child(1) {
+      display: flex;
+      align-items: baseline;
+      background-color: rgb(220, 220, 220);
+      border-radius: .5rem;
+      padding: .5rem 0;
+      margin-bottom: 1rem;
+    }
+    .modal-endereco .main .input-item:nth-child(2) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: .8rem;
+      border: 0;
+      background-color: rgb(255, 60, 60);
+      color: rgb(255, 255, 255);
+      border-radius: .5rem;
+      cursor: pointer;      
+    }
+    .modal-endereco .main .input-item:nth-child(2) i {
+      font-size: 1.2rem;
+      margin-right: 1rem;
+    }
+    .modal-endereco .main .input-item:nth-child(2):hover {
+      box-shadow: 0 1px 10px rgb(0, 0, 0, .7);
+    }
+
+    .modal-endereco .footer {
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .modal-endereco .footer h4 {
+      font-weight: 500;
+    }
+    .modal-endereco .footer p:first-of-type {
+      color: rgb(110, 110, 110);
+      margin: .5rem 0;
+    }
+    :where(
+      .footer p:last-of-type,
+      .footer p:last-of-type a
+    ) {
+      color: rgb(255, 0, 0);
+      text-decoration: none;
     }
 
   </style>
@@ -577,7 +638,7 @@
     <nav class="navbar-mobile">
 
       <div class="logomarca">
-        <img src="./imagens/logo.png" alt="Logomarca">
+        <img src="./assets/image/global/logomarca.jpg" alt="Logomarca">
         <i class="fa-solid fa-bars hamburguer" id="hamburguer"></i>
       </div>
 
@@ -603,7 +664,7 @@
     <nav class="navbar-desktop">
 
       <div class="logomarca-desktop">
-        <img src="./imagens/logo.png" alt="Logomarca">
+        <img src="./assets/image/global/logomarca.jpg" alt="Logomarca">
       </div>
       <ul class="nav-menu-desktop">
         <li class="nav-item"><a href="#">Início</a></li>
@@ -638,12 +699,12 @@
         <div class="restaurantes">
           <h2>Restaurantes</h2>
           <button>Ver opções »</button>
-          <img src="svg/hamburguer.svg">
+          <img src="./assets/svg/pages/index/hamburguer.svg">
         </div>
         <div class="mercados">
           <h2>Mercados</h2>
           <button>Buscar lojas »</button>
-          <img src="svg/carrinho.svg" width="280px">
+          <img src="./assets/svg/pages/index/carrinho.svg">
         </div>
       </div>
 
@@ -660,13 +721,13 @@
         <input type="radio" name="radio-slide-ofertas" id="slide-oferta3">
       
         <label for="slide-oferta1" id="oferta1">
-          <img src="./imagens/oferta1.jpg" alt="Slide oferta 1">
+          <img src="./assets/image/pages/index/oferta1.jpg" alt="Slide oferta 1">
         </label>
         <label for="slide-oferta2" id="oferta2">
-          <img src="./imagens/oferta2.jpg" alt="Slide oferta 2">
+          <img src="./assets/image/pages/index/oferta2.jpg" alt="Slide oferta 2">
         </label>
         <label for="slide-oferta3" id="oferta3">
-          <img src="./imagens/oferta3.jpg" alt="Slide oferta 3">
+          <img src="./assets/image/pages/index/oferta3.jpg" alt="Slide oferta 3">
         </label>
       
       </div>
@@ -733,18 +794,18 @@
   <div class="janela-modal-endereco" id="janela-modal-endereco">
     <div class="modal-endereco">
       <button class="fechar-modal-endereco" id="fechar-modal-endereco">
-        <i class="fa-solid fa-xmark"></i>
+        <i class="fa-solid fa-xmark" id="fechar-modal-endereco"></i>
       </button>
 
       <div class="header">
-        <img src="/imagens/logomarca.jpg" alt="Logomarca Snekki">
+        <img src="./assets/image/global/logomarca.jpg" alt="Logomarca Snekki">
         <h2>Aonde você quer receber seu pedido?</h2>
       </div>
 
       <div class="main">
         <div class="input-item">
           <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" name="cep" id="cep" placeholder="Digite o CEP">
+          <input type="text" name="cep" id="cep" placeholder="Digite seu CEP">
         </div>
         <button class="input-item">
           <i class="fa-solid fa-location-dot"></i>
@@ -762,7 +823,7 @@
   </div>
 
 
-  <script src="./scripts/slide.js"></script>
+  <script src="./assets/js/pages/index/slide.js"></script>
   <script src="https://kit.fontawesome.com/884606ba7f.js" crossorigin="anonymous"></script>
   <script>
 
@@ -778,6 +839,17 @@
         btnHamburguer.classList.replace('fa-xmark', 'fa-bars')
       }
 
+    })
+
+    const inputEndereco = document.getElementById('input-endereco')
+    const modalEndereco = document.querySelector('.janela-modal-endereco')
+    inputEndereco.addEventListener('focus', (e) => {
+      modalEndereco.classList.add('open')
+    })
+    modalEndereco.addEventListener('click', (e) => {
+      if (e.target.id == 'fechar-modal-endereco' || e.target.id == 'janela-modal-endereco') {
+        modalEndereco.classList.remove('open')
+      }
     })
 
   </script>

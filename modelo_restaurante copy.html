@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/image/global/logomarca.jpg" type="image/x-icon">
+    <title>Modelo Restaurante</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        /* Estilizando a logomarca */
+        .logomarca-desktop img {
+            width: 85px;
+            border-radius: .3rem;
+        }
+
+        /* Estilizando a foto do usuário */
+        .usuario img {
+            width: 75px;
+            border-radius: 5rem;
+        }
+
+        /* navbar */
+        .navbar-desktop {
+            background-color: aqua;
+            width: 100%;
+            max-width: 1800px;
+            margin: auto;
+            padding: .4rem 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        /* links da navbar */
+        .navbar-desktop .links {
+            background-color: blueviolet;
+            width: 20%;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 10px;
+        }
+        .navbar-desktop .links li {
+            background-color: bisque;
+            flex: 0 0 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+
+        <!-- Navbar Desktop -->
+        <nav class="navbar-desktop">
+
+            <div class="logomarca-desktop">
+                <img src="./assets/image/global/logomarca.jpg" alt="Logomarca Snekki">
+            </div>
+
+            <ul class="links">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Restaurantes</a></li>
+                <li><a href="#">Mercados</a></li>
+            </ul>
+
+            <div class="busca">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="buscar" id="buscar">
+            </div>
+
+            <div class="usuario">
+                <img src="./files/avatar_usuarios/avatar.jpg" alt="Avatar do usuário">
+            </div>
+
+            <div class="carrinho">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div class="info-carrinho">
+                    <p>R$ <span class="valor-total">0,00</span></p>
+                    <p><span class="qnt-itens">0</span> itens</p>
+                </div>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <script src="https://kit.fontawesome.com/884606ba7f.js"crossorigin="anonymous"></script>
+
+</body>
+</html>
