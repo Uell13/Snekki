@@ -1,94 +1,260 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/pages/index/index.css">
-    <link rel="shortcut icon" href="./assets/image/global/logomarca.jpg" type="image/x-icon">
-    <title>oDelivery - Index</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/pages/index/index.css">
+  <link rel="shortcut icon" href="./assets/image/global/logomarca.jpg" type="image/x-icon">
+  <title>Modelo - Navbar Responsiva</title>
 </head>
 <body>
 
-    <div class="container">
+  <header>
 
-        <header>
-            <img src="./assets/image/global/logomarca.jpg" alt="Logo oDelivery" width="43px" class="logo">
-            <nav>
-                <ul class="menu_navegacao">
-                    <li><a href="#">criar conta</a></li>
-                </ul>
-            </nav>
-            <a href="#"><button>Entrar</button></a>
-        </header>
+    <!-- Navegação Mobile -->
+    <nav class="navbar-mobile">
 
-        <main>
-            <h1>O que você precisa está aqui. Peça e<br>receba onde estiver.</h1>
+      <div class="logomarca">
+        <img src="./assets/image/global/logomarca.jpg" alt="Logomarca">
+        <i class="fa-solid fa-bars hamburguer" id="hamburguer"></i>
+      </div>
 
-            <div class="input-custon">
-                <input type="text" id="input-endereco" required>
-                <label for="input-endereco">Endereço de entrega</label>
-            </div>
+      <div class="menu">
+        <div class="input-pesquisa">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" name="pesquisa" id="pesquisa">
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#">Início</a></li>
+          <li class="nav-item"><a href="#">Restaurantes</a></li>
+          <li class="nav-item"><a href="#">Mercados</a></li>
+        </ul>
+        <div class="btns-deslogado">
+          <button class="btn-cadastrar">Criar conta</button>
+          <button class="btn-logar">Entrar</button>
+        </div>
+      </div>
 
-            <div class="botoes">
-                <div class="restaurantes">
-                    <h2>Restaurantes</h2>
-                    <button>Ver opções »</button>
-                    <img src="./assets/svg/pages/index/hamburguer.svg">
-                </div>
-                <div class="mercados">
-                    <h2>Mercados</h2>
-                    <button>Buscar lojas »</button>
-                    <img src="./assets/svg/pages/index/carrinho.svg">
-                </div>
-            </div>
+    </nav>
 
-            <h2>Catálogo de ofertas</h2>
+    <!-- Navegação Desktop -->
+    <nav class="navbar-desktop">
 
-            <div class="slider-oferta">
+      <div class="logomarca-desktop">
+        <img src="./assets/image/global/logomarca.jpg" alt="Logomarca">
+      </div>
+      <ul class="nav-menu-desktop">
+        <li class="nav-item"><a href="#">Início</a></li>
+        <li class="nav-item"><a href="#">Restaurantes</a></li>
+        <li class="nav-item"><a href="#">Mercados</a></li>
+      </ul>
+      <div class="input-pesquisa-desktop">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" name="pesquisa" id="pesquisa">
+      </div>
+      <div class="btns-deslogado-desktop">
+        <button class="btn-cadastrar">Criar conta</button>
+        <button class="btn-logar">Entrar</button>
+      </div>
 
-                <input type="radio" name="radio-slide-ofertas" id="slide-oferta1" checked>
-                <input type="radio" name="radio-slide-ofertas" id="slide-oferta2">
-                <input type="radio" name="radio-slide-ofertas" id="slide-oferta3">
+    </nav>
 
-                <label for="slide-oferta1" id="oferta1">
-                    <img src="./assets/image/pages/index/oferta1.jpg" alt="Slide oferta 1">
-                </label>
-                <label for="slide-oferta2" id="oferta2">
-                    <img src="./assets/image/pages/index/oferta2.jpg" alt="Slide oferta 2">
-                </label>
-                <label for="slide-oferta3" id="oferta3">
-                    <img src="./assets/image/pages/index/oferta3.jpg" alt="Slide oferta 3">
-                </label>
+  </header>
 
-            </div>
+  <main>
 
-            <h2>Recomendações</h2>
+    <section class="container">
 
-            <div class="recomendacoes">
+      <h1>O que você precisa está aqui. Peça e receba onde estiver.</h1>
 
-                <div class="restaurante" id="primeiro"></div>
-                <div class="restaurante"></div>
-                <div class="restaurante"></div>
-                <div class="restaurante"></div>
-                <div class="restaurante"></div>
-                <div class="restaurante"></div>
-                <div class="restaurante"></div>
-                <div class="restaurante"></div>
-                <div class="restaurante"></div>
-                <div class="restaurante"></div>
+      <div class="input-custon">
+        <input type="text" id="input-endereco" required>
+        <label for="input-endereco">Endereço de entrega</label>
+      </div>
 
-                <div class="botao-esquerdo"><i class="fa-regular fa-circle-left" id="esquerda"></i></div>
-                <div class="botao-direito"><i class="fa-regular fa-circle-right" id="direita"></i></div>
-                
-            </div>
+      <div class="botoes">
+        <div class="restaurantes">
+          <h2>Restaurantes</h2>
+          <button>Ver opções »</button>
+          <img src="./assets/svg/pages/index/hamburguer.svg">
+        </div>
+        <div class="mercados">
+          <h2>Mercados</h2>
+          <button>Buscar lojas »</button>
+          <img src="./assets/svg/pages/index/carrinho.svg">
+        </div>
+      </div>
 
-        </main>
-    
+    </section>
+
+    <section class="container-slider">
+
+      <h2>Catálogo de ofertas</h2>
+
+      <div class="slider-oferta">
+
+        <input type="radio" name="radio-slide-ofertas" id="slide-oferta1" checked>
+        <input type="radio" name="radio-slide-ofertas" id="slide-oferta2">
+        <input type="radio" name="radio-slide-ofertas" id="slide-oferta3">
+
+        <label for="slide-oferta1" id="oferta1">
+          <img src="./assets/image/pages/index/oferta1.jpg" alt="Slide oferta 1">
+        </label>
+        <label for="slide-oferta2" id="oferta2">
+          <img src="./assets/image/pages/index/oferta2.jpg" alt="Slide oferta 2">
+        </label>
+        <label for="slide-oferta3" id="oferta3">
+          <img src="./assets/image/pages/index/oferta3.jpg" alt="Slide oferta 3">
+        </label>
+
+      </div>
+
+    </section>
+
+    <section class="container-recomendacoes">
+
+      <h2>Recomendações</h2>
+
+      <i id="esquerdo" class="fa-solid fa-circle-chevron-left"></i>
+      <div class="slider-recomendacoes">
+
+        <div class="card-restaurante">
+          <img src="./files/image_restaurantes/download.jpg" alt="logomarca restaurante">
+          <h4>mcdonald's</h4>
+          <span><i class="fa-solid fa-star"></i>3,5</span>
+        </div>
+        <div class="card-restaurante">
+          <img src="./files/image_restaurantes/download.jpg" alt="logomarca restaurante">
+          <h4>mcdonald's</h4>
+          <span><i class="fa-solid fa-star"></i>3,5</span>
+        </div>
+        <div class="card-restaurante">
+          <img src="./files/image_restaurantes/download.jpg" alt="logomarca restaurante">
+          <h4>mcdonald's</h4>
+          <span><i class="fa-solid fa-star"></i>3,5</span>
+        </div>
+        <div class="card-restaurante">
+          <img src="./files/image_restaurantes/download.jpg" alt="logomarca restaurante">
+          <h4>mcdonald's</h4>
+          <span><i class="fa-solid fa-star"></i>3,5</span>
+        </div>
+        <div class="card-restaurante">
+          <img src="./files/image_restaurantes/download.jpg" alt="logomarca restaurante">
+          <h4>mcdonald's</h4>
+          <span><i class="fa-solid fa-star"></i>3,5</span>
+        </div>
+        <div class="card-restaurante">
+          <img src="./files/image_restaurantes/download.jpg" alt="logomarca restaurante">
+          <h4>mcdonald's</h4>
+          <span><i class="fa-solid fa-star"></i>3,5</span>
+        </div>
+        <div class="card-restaurante">
+          <img src="./files/image_restaurantes/download.jpg" alt="logomarca restaurante">
+          <h4>mcdonald's</h4>
+          <span><i class="fa-solid fa-star"></i>3,5</span>
+        </div>
+        <div class="card-restaurante">
+          <img src="./files/image_restaurantes/download.jpg" alt="logomarca restaurante">
+          <h4>mcdonald's</h4>
+          <span><i class="fa-solid fa-star"></i>3,5</span>
+        </div>
+        <div class="card-restaurante">
+          <img src="./files/image_restaurantes/download.jpg" alt="logomarca restaurante">
+          <h4>mcdonald's</h4>
+          <span><i class="fa-solid fa-star"></i>3,5</span>
+        </div>
+        <div class="card-restaurante">
+          <img src="./files/image_restaurantes/download.jpg" alt="logomarca restaurante">
+          <h4>mcdonald's</h4>
+          <span><i class="fa-solid fa-star"></i>3,5</span>
+        </div>
+        <div class="card-restaurante">
+          <img src="./files/image_restaurantes/download.jpg" alt="logomarca restaurante">
+          <h4>mcdonald's</h4>
+          <span><i class="fa-solid fa-star"></i>3,5</span>
+        </div>
+        <div class="card-restaurante">
+          <img src="./files/image_restaurantes/download.jpg" alt="logomarca restaurante">
+          <h4>mcdonald's</h4>
+          <span><i class="fa-solid fa-star"></i>3,5</span>
+        </div>
+
+      </div>
+      <i id="direito" class="fa-solid fa-circle-chevron-right"></i>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="contato">
+      <h5>Snekki</h5>
+      <ul>
+        <li><a href="#">Fale conosco</a></li>
+      </ul>
     </div>
 
+    <div class="descubra">
+      <h5>Descubra</h5>
+      <ul>
+        <li><a href="#">Cadastre seu restaurante</a></li>
+        <li><a href="#">Cadastre-se como parceiro</a></li>
+      </ul>
+    </div>
 
-    <script src="./assets/js/pages/index/slide.js"></script>
-    <script src="https://kit.fontawesome.com/884606ba7f.js" crossorigin="anonymous"></script>
+    <div class="social">
+      <h5>Social</h5>
+      <ul>
+        <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook"></i></a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-twitter"></i></a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
+      </ul>
+    </div>
+
+  </footer>
+
+
+  <!-- Modal Endereço -->
+  <div class="janela-modal-endereco" id="janela-modal-endereco">
+    <div class="modal-endereco">
+      <button class="fechar-modal-endereco" id="fechar-modal-endereco">
+        <i class="fa-solid fa-xmark" id="fechar-modal-endereco"></i>
+      </button>
+
+      <div class="header">
+        <img src="./assets/image/global/logomarca.jpg" alt="Logomarca Snekki">
+        <h2>Aonde você quer receber seu pedido?</h2>
+      </div>
+
+      <div class="main">
+        <div class="input-item">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" name="cep" id="cep" placeholder="Digite seu CEP">
+        </div>
+        <button class="input-item">
+          <i class="fa-solid fa-location-dot"></i>
+          Usar minha localização
+        </button>
+      </div>
+
+      <div class="footer">
+        <h4>Já tem um endereço salvo?</h4>
+        <p>Entre na sua conta para selecionar seu endereço.</p>
+        <p><a href="#">Entrar</a> ou <a href="#">cadastrar</a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="./assets/js/pages/index/index.js"></script>
+  <script src="./assets/js/pages/index/slider_ofertas.js"></script>
+  <script src="./assets/js/pages/index/slider_recomendacoes.js"></script>
+  <script src="./assets/js/pages/index/modal_endereco.js"></script>
+  <script src="https://kit.fontawesome.com/884606ba7f.js" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

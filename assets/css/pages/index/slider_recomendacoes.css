@@ -1,0 +1,95 @@
+.container-recomendacoes h2 {
+    color: rgb(110, 110, 110);
+    align-self: flex-start;
+    font-size: 2.5rem;
+    margin: 8rem 0 1rem 5%;
+}
+.container-recomendacoes {
+    width: 80%;
+    margin: auto;
+    padding: 0 100px;
+    margin-bottom: 8rem;
+    position: relative;
+}
+
+.container-recomendacoes > i {
+    font-size: 3rem;
+    color: rgba(0, 0, 0, .5);
+    position: absolute;
+    cursor: pointer;
+    top: 70%;
+}
+.container-recomendacoes i:first-of-type {
+    left: 0;
+}
+.container-recomendacoes i:last-of-type {
+    right: 0;
+}
+
+.card-restaurante img {
+    width: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.card-restaurante {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    border-radius: 5px;
+    border: 1px solid rgba(110, 110, 110, 0.3);
+    scroll-snap-align: start;
+    cursor: pointer;
+}
+.card-restaurante:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+.card-restaurante h4 {
+    margin-top: 1rem;
+}
+.card-restaurante span {
+    color: rgb(255, 217, 0);
+}
+
+.slider-recomendacoes {
+    margin-top: 2rem;
+    padding: 1rem 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 6) - 27px);
+    grid-column-gap: 2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.slider-recomendacoes::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (max-width: 1650px) {
+    .slider-recomendacoes {
+        grid-auto-columns: calc((100% / 5) - 26px);
+    }
+}
+@media screen and (max-width: 1480px) {
+    .slider-recomendacoes {
+        grid-auto-columns: calc((100% / 4) - 24px);
+    }
+}
+@media screen and (max-width: 1210px) {
+    .slider-recomendacoes {
+        grid-auto-columns: calc((100% / 3) - 22px);
+    }
+}
+@media screen and (max-width: 960px) {
+    .slider-recomendacoes {
+        grid-auto-columns: calc((100% / 2) - 16px);
+    }
+}
+@media screen and (max-width: 720px) {
+    .slider-recomendacoes {
+        grid-auto-columns: 100%;
+    }
+}

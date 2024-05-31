@@ -1,0 +1,124 @@
+.janela-modal-endereco {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, .65);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-endereco {
+    width: 100%;
+    max-width: 600px;
+    background-color: rgb(253, 239, 227);
+    margin: .5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.fechar-modal-endereco {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.janela-modal-endereco.open {
+    display: flex;
+}
+
+.modal-endereco .header {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.modal-endereco .header img {
+    width: 8rem;
+    border-radius: .5rem;
+}
+
+.modal-endereco .header h2 {
+    font-weight: 500;
+    margin-block: 1rem;
+}
+
+.modal-endereco .main {
+    width: 50%;
+    margin: 2.5rem auto;
+}
+
+.modal-endereco .main .input-item:nth-child(1) i {
+    color: rgb(255, 60, 60);
+    font-size: 1.5rem;
+    margin-inline: 1rem;
+}
+
+.modal-endereco .main .input-item input {
+    width: 100%;
+    font-size: 1.2rem;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+}
+
+.modal-endereco .main .input-item:nth-child(1) {
+    display: flex;
+    align-items: baseline;
+    background-color: rgb(220, 220, 220);
+    border-radius: .5rem;
+    padding: .5rem 0;
+    margin-bottom: 1rem;
+}
+
+.modal-endereco .main .input-item:nth-child(2) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    border: 0;
+    background-color: rgb(255, 60, 60);
+    color: rgb(255, 255, 255);
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.modal-endereco .main .input-item:nth-child(2) i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.modal-endereco .main .input-item:nth-child(2):hover {
+    box-shadow: 0 1px 10px rgb(0, 0, 0, .7);
+}
+
+.modal-endereco .footer {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.modal-endereco .footer h4 {
+    font-weight: 500;
+}
+
+.modal-endereco .footer p:first-of-type {
+    color: rgb(110, 110, 110);
+    margin: .5rem 0;
+}
+
+:where(.footer p:last-of-type,
+    .footer p:last-of-type a) {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+}
