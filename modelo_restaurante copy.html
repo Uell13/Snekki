@@ -16,20 +16,19 @@
         /* Estilizando a logomarca */
         .logomarca-desktop img {
             width: 85px;
-            border-radius: .3rem;
+            border-radius: 50%;
         }
 
         /* Estilizando a foto do usuário */
         .usuario img {
-            width: 75px;
-            border-radius: 5rem;
+            width: 65px;
+            border-radius: 50%;
         }
 
         /* navbar */
         .navbar-desktop {
             background-color: aqua;
-            width: 100%;
-            max-width: 1800px;
+            max-width: 1400px;
             margin: auto;
             padding: .4rem 0;
             display: flex;
@@ -39,16 +38,59 @@
 
         /* links da navbar */
         .navbar-desktop .links {
-            background-color: blueviolet;
-            width: 20%;
             list-style: none;
             display: flex;
-            flex-wrap: wrap;
-            column-gap: 10px;
+            gap: 2rem;
         }
-        .navbar-desktop .links li {
-            background-color: bisque;
-            flex: 0 0 50px;
+        .navbar-desktop .links a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+            position: relative;
+        }
+        .navbar-desktop .links a::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-bottom: 1px solid rgb(255, 60, 60);
+            width: 0;
+            transition: width .3s;
+        }
+        .navbar-desktop .links a:hover {
+            color: rgb(255, 60, 60);
+        }
+        .navbar-desktop .links a:hover::after {
+            width: 100%;
+        }
+
+        /* Input de pesquisa */
+        .busca {
+            border: 1px solid rgb(255, 60, 60);
+            border-radius: 10px;
+            color: rgb(255, 60, 60);
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            font-size: 1.46rem;
+        }
+        .busca input {
+            margin-left: .3rem;
+            font-size: 1.46rem;
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+        .busca input:focus::after {
+            content: 'a';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: tomato;
         }
 
     </style>

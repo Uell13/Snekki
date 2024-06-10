@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página para testar telas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+        }
+
+        aside {
+            background-color: rgb(253, 239, 228);
+            width: 20%;
+        }
+        .logomarca {
+            margin-top: 1.5rem;
+        }
+        .logomarca img {
+            width: 150px;
+            display: block;
+            margin: 0 auto;
+        }
+        .perfil img {
+            width: 65px;
+            border-radius: 50%;
+        }
+        .perfil span {
+            font-weight: 600;
+            font-size: 1.13rem;
+        }
+        .perfil {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .8rem;
+            margin-block: 1.8rem 10rem;
+        }
+        .sub-titulo {
+            display: flex;
+            justify-content: center;
+            font-size: 1.42rem;
+            margin-bottom: 2rem;
+        }
+        .side-bar {
+            margin-top: 1rem;
+        }
+        .side-bar .nav-item {
+            list-style: none;
+        }
+        .side-bar .nav-item i {
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 128, 0);
+            border-radius: 50%;
+            padding: 4px;
+            margin-right: .8rem;
+        }
+        .side-bar .nav-item.invalid i {
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(0, 128, 0);
+            margin-right: .8rem;
+        }
+        .side-bar .nav-item.selected {
+            background-color: rgb(239, 190, 149);
+            border-left: 5px solid rgb(0, 128, 0);
+        }
+        .side-bar .nav-item.selected a {
+            padding: 10px 15px;
+        }
+        .side-bar .nav-item a {
+            display: block;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+        }
+        .side-bar .nav-item a:hover {
+            background-color: rgb(239, 190, 149);
+        }
+
+        main {
+            width: 70vw;
+            margin: 0 auto;
+        }
+        .titulo {
+            font-size: 1.58rem;
+            margin-block: 3rem 2rem;
+        }
+
+        /* Vou tentar melhorar isso outra hora */
+        .navegacao {
+            display: inline-flex;
+            gap: 5rem;
+            font-size: 1.44rem;
+            list-style: none;
+        }
+        .navegacao .selecionado {
+            color: rgb(224, 165, 74);
+            position: relative;
+        }
+        .navegacao .selecionado::after {
+            content: '';
+            display: block;
+            border-bottom: 2px solid rgb(224, 165, 74);
+        }
+
+        .carregar-nova-logo {
+            width: 60%;
+            text-align: center;
+            margin-block: 2rem 5rem;
+        }
+        .carregar-nova-logo > h2 {
+            font-weight: 600;
+            margin-bottom: .5rem;
+        }
+        .carregar-nova-logo .nova-logo {
+            border: 2px solid rgb(203, 203, 199);
+            border-radius: 10px;
+            padding: 30px 0;
+            background-color: rgb(216, 206, 195);
+            position: relative;
+        }
+        .carregar-nova-logo .nova-logo button {
+            border: none;
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255);
+            padding: 15px 10px;
+            font-size: 1.33rem;
+            cursor: pointer;
+        }
+        .carregar-nova-logo .nova-logo h2 {
+            font-weight: 500;
+            margin-top: 1.5rem;
+        }
+        .carregar-nova-logo .nova-logo i {
+            position: absolute;
+            top: 50%;
+            right: -35px;
+            font-size: 1.22rem;
+        }
+
+        .info-restaurante h2 {
+            font-size: 1.96rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-restaurante .input-item {
+            width: 70%;
+            margin-block: 1rem;
+            position: relative;
+        }
+        .info-restaurante .input-item label {
+            font-size: 1.22rem;
+        }
+        .info-restaurante .input-item input {
+            width: 100%;
+            padding: 5px 8px;
+            font-size: 1.22rem;
+            background-color: rgb(216, 206, 195);
+            border: 2px solid rgb(203, 203, 199);
+            border-radius: 5px;
+        }
+
+        /* Isso é temporario depois melhoro */
+        .info-restaurante .input-item span {
+            position: absolute;
+            right: -110px;
+            font-size: 1.44rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <aside>
+
+        <div class="logomarca">
+            <img src="./assets/image/global/logomarca.jpg" alt="Logomarca Snekki">
+        </div>
+
+        <div class="perfil">
+            <img src="./files/avatar_usuarios/avatar.jpg" alt="">
+            <span>pizzariadonorte@gmail.com</span>
+        </div>
+
+        <div class="sub-titulo">
+            <h2>
+                Estamos quase lá.<br>
+                Configure seu perfil e<br>
+                comece a vender hoje<br>
+                mesmo!
+            </h2>
+        </div>
+
+        <hr>
+
+        <ul class="side-bar">
+            <li class="nav-item"><a href="#"><i class="fa-solid fa-check"></i>Formas de pagamento</a></li>
+            <li class="nav-item"><a href="#"><i class="fa-solid fa-check"></i>Área de entrega</a></li>
+            <li class="nav-item"><a href="#"><i class="fa-solid fa-check"></i>Horários de funcionamento</a></li>
+            <li class="nav-item invalid selected"><a href="#"><i class="fa-solid fa-check"></i>Perfil</a></li>
+            <li class="nav-item"><a href="#"><i class="fa-solid fa-check"></i>Financeiro</a></li>
+            <li class="nav-item"><a href="#"><i class="fa-solid fa-check"></i>Cardápio</a></li>
+        </ul>
+
+    </aside>
+
+    <main>
+
+        <div class="titulo">
+            <h1>Perfil</h1>
+        </div>
+
+        <ul class="navegacao">
+            <li class="selecionado">Loja</li>
+            <li>Endereço</li>
+            <li>Gestão de acesso</li>
+        </ul>
+
+        <hr>
+
+        <div class="carregar-nova-logo">
+            <h2>Sua logo</h2>
+
+            <div class="nova-logo">
+                <button class="btn-upload">Procurar arquivo</button>
+                <h2>Ou solte o arquivo aqui</h2>
+                <i class="fa-solid fa-circle-question"></i>
+            </div>
+
+        </div>
+
+        <div class="info-restaurante">
+            
+            <h2>Pizzaria do Norte</h2>
+
+            <div class="input-item">
+                <label for="id-loja">ID da loja</label>
+                <input type="text" id="id-loja" value="sdghusbadujbdsbadubasjkbdsab">
+                <span><i class="fa-solid fa-copy"></i> copiar</span>
+            </div>
+
+            <div class="input-item">
+                <label for="nome-loja">Nome da loja</label>
+                <input type="text" id="nome-loja" value="Pizzaria do Norte">
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="https://kit.fontawesome.com/884606ba7f.js"crossorigin="anonymous"></script>
+
+</body>
+</html>

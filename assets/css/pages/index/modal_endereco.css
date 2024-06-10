@@ -36,6 +36,18 @@
 
 .janela-modal-endereco.open {
     display: flex;
+    animation: abrirModalEndereco .5s;
+}
+
+@keyframes abrirModalEndereco {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
 }
 
 .modal-endereco .header {
