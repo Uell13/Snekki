@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="./assets/image/global/logomarca.jpg" type="image/x-icon">
     <title>Modelo Restaurante</title>
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -13,27 +14,33 @@
             font-family: Helvetica, Arial, sans-serif;
         }
 
+        /*
+        NAVBAR DESKTOP
+        NAVBAR DESKTOP
+        NAVBAR DESKTOP
+        */
+
         /* Estilizando a logomarca */
-        .logomarca-desktop img {
+        .navbar-desktop .logomarca-desktop img {
             width: 85px;
             border-radius: 50%;
         }
 
         /* Estilizando a foto do usuário */
-        .usuario img {
-            width: 65px;
+        .navbar-desktop .usuario img {
+            width: 60px;
             border-radius: 50%;
         }
 
         /* navbar */
         .navbar-desktop {
-            background-color: aqua;
             max-width: 1400px;
             margin: auto;
             padding: .4rem 0;
             display: flex;
             justify-content: space-around;
             align-items: center;
+            display: flex;
         }
 
         /* links da navbar */
@@ -67,7 +74,7 @@
         }
 
         /* Input de pesquisa */
-        .busca {
+        .navbar-desktop .busca {
             border: 1px solid rgb(255, 60, 60);
             border-radius: 10px;
             color: rgb(255, 60, 60);
@@ -76,22 +83,388 @@
             align-items: center;
             font-size: 1.46rem;
         }
-        .busca input {
+        .navbar-desktop .busca input {
             margin-left: .3rem;
             font-size: 1.46rem;
             background-color: transparent;
             border: none;
             outline: none;
         }
-        .busca input:focus::after {
-            content: 'a';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: tomato;
+
+        /* Carrinho */
+        .navbar-desktop .carrinho i {
+            font-size: 20px;
+            margin-right: .5rem;
         }
+        .navbar-desktop .carrinho {
+            display: flex;
+            align-items: center;
+        }
+
+        /*
+        FIM DO NAVBAR-DESKTOP
+        FIM DO NAVBAR-DESKTOP
+        FIM DO NAVBAR-DESKTOP
+        */
+
+        /*
+        NAVBAR MOBILE
+        NAVBAR MOBILE
+        NAVBAR MOBILE
+        */
+
+        .navbar-mobile .logomarca-mobile img {
+            width: 60px;
+            border-radius: 50%;
+        }
+
+        .navbar-mobile .usuario img {
+            width: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .navbar-mobile {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            margin: .3rem .5rem 0;
+        }
+        .navbar-mobile .acoes-menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 60%;
+        }
+
+        .navbar-mobile .acoes-menu .btn-menu i {
+            font-size: 1.43rem;
+            cursor: pointer;
+        }
+        .navbar-mobile .acoes-menu .busca i {
+            background-color: rgb(255, 60, 60);
+            font-size: 1.23rem;
+            padding: 7px;
+            border-radius: 50%;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+        }
+
+
+        .navbar-mobile .usuario {
+            position: relative;
+        }
+
+        .navbar-mobile .usuario .dropdown-usuario {
+            background-color: darkgray;
+            position: absolute;
+            right: 0;
+            width: 160px;
+            display: none;
+        }
+        .navbar-mobile .usuario .dropdown-usuario.active {
+            display: block;
+        }
+        
+        .navbar-mobile .usuario .dropdown-usuario li {
+            list-style: none;
+        }
+        .navbar-mobile .usuario .dropdown-usuario li a {
+            display: block;
+            padding: 15px 18px;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+        .navbar-mobile .usuario .dropdown-usuario li a:hover {
+            background-color: rgb(255, 60, 60);
+        }
+
+        .nav-mobile {
+            background-color: darkgray;
+            position: absolute;
+            top: 75px;
+            left: 0;
+            width: 100vw;
+            display: none;
+        }
+        .nav-mobile.active {
+            display: block;
+        }
+        .nav-mobile li {
+            list-style: none;
+        }
+        .nav-mobile li a {
+            display: block;
+            padding: 15px 5px;
+            font-size: 1.26rem;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+        .nav-mobile li a:hover {
+            background-color: rgb(255, 60, 60);
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar-desktop {
+                display: none;
+            }
+            .navbar-mobile {
+                display: flex;
+            }
+        }
+
+        /*
+        FIM DO NAVBAR-MOBILE
+        FIM DO NAVBAR-MOBILE
+        FIM DO NAVBAR-MOBILE
+        */
+
+        header hr {
+            border: 0;
+            border-bottom: 1px solid rgb(255, 60, 60);
+            box-shadow: 0 3px 10px rgb(0, 0, 0, .8);
+        }
+
+
+
+
+        :root {
+            --cor-principal: rgb(253, 239, 227);
+            --cor-primaria: rgb(255, 0, 0);
+            --cor-secundaria: rgb(255, 237, 0);
+            --cor-titulo-cinza: rgb(130, 130, 130);
+            --cor-fundo-modal: rgba(0, 0, 0, .8);
+            --cor-fonte-botao: rgb(255, 255, 255);
+        }
+
+section .banner_restaurante {
+    border: 1px solid var(--cor-primaria);
+    border-radius: 10px;
+    margin: 1em 3em;
+}
+section .banner_restaurante h3 {
+    text-align: center;
+    padding: 2em;
+}
+
+section .informacoes {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 3em;
+}
+section .info-restaurante {
+    display: flex;
+    column-gap: 1em;
+    margin: 0 1em;
+}
+section .info-restaurante img {
+    padding: .1em;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 50%;
+    width: 150px;
+}
+section .info-restaurante > div {
+    margin: 2em 0;
+}
+section .info-restaurante .estrela {
+    margin: 1em 0;
+}
+section .info-restaurante div p > span {
+    color: var(--cor-primaria);
+    cursor: pointer;
+}
+
+section .informacoes .botoes > div {
+    border: 1px solid var(--cor-primaria);
+    border-radius: 6px;
+    padding: .6em 1em;
+    margin: .9em;
+    cursor: pointer;
+}
+section .informacoes .botoes .btn_agenda {
+    display: flex;
+    flex-direction: column;
+}
+
+section .menu {
+    margin-inline: 3em;
+    margin-top: 1em;
+}
+section .menu h2 {
+    color: var(--cor-titulo-cinza);
+}
+section .menu .pratos > div {
+    height: 200px;
+    min-width: 400px;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 10px;
+}
+section .menu .pratos {
+    margin: 1em 0;
+    padding-bottom: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+section .menu .pratos div > img {
+    width: 200px;
+    height: 90%;
+    border-radius: 1rem;
+}
+section .menu .pratos div {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+section .menu .pratos div > img {
+    align-self: center;
+    margin: 0 1rem 0 0;
+}
+section .menu .pratos div ul li {
+    list-style-type: none;
+    font-size: 18px;
+    margin: 1rem;
+}
+section .menu .pratos div ul li:nth-child(4) {
+    color: var(--cor-primaria);
+    margin: 2rem 0 0 1rem;
+}
+
+/* Modal VerMais */
+.janela-modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--cor-fundo-modal);
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 999;
+}
+.modal-vermais {
+    width: 28%;
+    height: 100vh;
+    min-width: 450px;
+    min-height: 400px;
+    background-color: var(--cor-principal);
+    padding: 50px;
+    position: relative;
+}
+.fechar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--cor-primaria);
+    color: var(--cor-fonte-botao);
+    font-size: 20px;
+    cursor: pointer;
+}
+.janela-modal.abrir {
+    display: flex;
+}
+
+/* Estilizando as opções do modal VerMais */
+.opcoes-modal-vermais {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    column-gap: 3rem;
+    font-size: 22px;
+    margin-bottom: 3rem;
+}
+.opcoes-modal-vermais > li {
+    cursor: pointer;
+}
+.indicacao-modal-vermais {
+    color: var(--cor-primaria);
+    font-weight: bold;
+    border-bottom: 2px solid var(--cor-primaria);
+}
+
+/* Estilizando as informações da opção SOBRE do modal VerMais */
+.sobre {
+    font-size: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.sobre div {
+    width: 100%;
+}
+.sobre div > h3 {
+    margin-block: .8rem;
+    font-weight: normal;
+}
+.sobre div > p {
+    font-size: 18px;
+    color: var(--cor-titulo-cinza);
+}
+.sobre.abrir {
+    display: flex;
+}
+
+/* Estilizando as informações da opção HORÁRIO do modal VerMais */
+.horario {
+    display: none;
+    justify-content: center;
+    font-size: 18px;
+}
+.horario table {
+    width: 100%;
+}
+.horario table th {
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    text-align: start;
+    font-weight: normal;
+}
+.horario table td {
+    padding-bottom: 1rem;
+}
+.horario.abrir {
+    display: flex;
+}
+
+/* Estilizando as informações da opção PAGAMENTO do modal VerMais */
+.pagamento {
+    display: none;
+}
+.pagamento h3 {
+    font-size: 18px;
+    color: var(--cor-titulo-cinza);
+    margin-block: 1rem;
+}
+.pagamento h4 {
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--cor-titulo-cinza);
+    margin-block: 1rem;
+}
+.pagamento div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem .6rem;
+}
+.pagamento div > p {
+    background-color: rgb(230, 230, 230);
+    padding: 10px 14px;
+    border-radius: 5px;
+}
+.pagamento.abrir {
+    display: block;
+}
+
+
+
 
     </style>
 </head>
@@ -131,9 +504,178 @@
 
         </nav>
 
+        <!-- Navbar Mobile -->
+        <nav class="navbar-mobile">
+
+            <div class="acoes-menu">
+
+                <div class="btn-menu">
+                    <i class="fa-solid fa-bars" id="btn-burguer"></i>
+
+                    <ul class="nav-mobile">
+
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Restaurantes</a></li>
+                        <li><a href="#">Mercados</a></li>
+
+                    </ul>
+
+                </div>
+    
+                <div class="logomarca-mobile">
+                    <img src="./assets/image/global/logomarca.jpg" alt="Logomarca Snekki">
+                </div>
+    
+                <div class="busca">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+            </div>
+
+            <div class="usuario">
+                <img src="./files/avatar_usuarios/avatar.jpg" alt="Avatar do usuário" id="img-usuario">
+                <ul class="dropdown-usuario">
+                    <li>
+                        <a href="#">
+                            <i class="fa-regular fa-circle-user"></i>
+                            Minha conta
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Meu carrinho
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Sair
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+        </nav>
+
+        <hr>
+
     </header>
 
+    <section>
+
+        <div class="banner_restaurante">
+            <h3>Imagem Banner do Restaurante Aqui</h3>
+        </div>
+
+        <div class="informacoes">
+
+            <!-- Informações do restaurante -->
+            <div class="info-restaurante">
+                <img src="./assets/image/global/logo.png" alt="Imagem do Restaurante">
+                <div>
+                    <h4>NOME DO RESTAURANTE AQUI</h4>
+                    <p><span onclick="abrirVerMais()">VER MAIS</span> | Pedido mínimo R$19,00</p>
+                    <div class="estrela">
+                        <span><i class="fa-solid fa-star" style="color: yellow;"></i>4,6</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botões de opções para o usuário -->
+            <div class="botoes">
+                <div class="btn_entrega" onclick="abrirOpcaoDeEntrega()">
+                    <span><i class="fa-solid fa-motorcycle"></i> Entrega</span>
+                </div>
+                <div class="btn_agenda">
+                    <span>Hoje 55-65</span>
+                    <span>R$ 10,00</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="menu">
+            <h2>Refeições</h2>
+            <div class="pratos">
+                <div onclick="abrirPrato()">
+                    <ul>
+                        <li>Nome do prato</li>
+                        <li>Descrição do prato</li>
+                        <li>Quantidade pessoas que serve</li>
+                        <li>VALOR</li>
+                    </ul>
+                    <img src="./files/image_pratos/prato1.jpg">
+                </div>
+                <div>
+                    <ul>
+                        <li>Nome do prato</li>
+                        <li>Descrição do prato</li>
+                        <li>Quantidade pessoas que serve</li>
+                        <li>VALOR</li>
+                    </ul>
+                    <img src="./assets/image/pages/modelo_restaurante/svg-file.png">
+                </div>
+                <div>
+                    <ul>
+                        <li>Nome do prato</li>
+                        <li>Descrição do prato</li>
+                        <li>Quantidade pessoas que serve</li>
+                        <li>VALOR</li>
+                    </ul>
+                    <img src="./assets/image/pages/modelo_restaurante/svg-file.png">
+                </div>
+                <div>
+                    <ul>
+                        <li>Nome do prato</li>
+                        <li>Descrição do prato</li>
+                        <li>Quantidade pessoas que serve</li>
+                        <li>VALOR</li>
+                    </ul>
+                    <img src="./assets/image/pages/modelo_restaurante/svg-file.png">
+                </div>
+                <div>
+                    <ul>
+                        <li>Nome do prato</li>
+                        <li>Descrição do prato</li>
+                        <li>Quantidade pessoas que serve</li>
+                        <li>VALOR</li>
+                    </ul>
+                    <img src="./assets/image/pages/modelo_restaurante/svg-file.png">
+                </div>
+                <div>
+                    <ul>
+                        <li>Nome do prato</li>
+                        <li>Descrição do prato</li>
+                        <li>Quantidade pessoas que serve</li>
+                        <li>VALOR</li>
+                    </ul>
+                    <img src="./assets/image/pages/modelo_restaurante/svg-file.png">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
     <script src="https://kit.fontawesome.com/884606ba7f.js"crossorigin="anonymous"></script>
+    <script>
+
+        // Dropdown Usuário
+        const imgUsuario = document.querySelector("#img-usuario");
+        const dropdownUsuario = document.querySelector(".dropdown-usuario");
+
+        imgUsuario.addEventListener("click", () => {
+            dropdownUsuario.classList.toggle("active");
+        })
+
+        const btnBurguer = document.querySelector("#btn-burguer");
+        const navLinks = document.querySelector(".nav-mobile");
+
+        btnBurguer.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        })
+
+    </script>
 
 </body>
 </html>
