@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entregador-sem-cadastro - Modelo</title>
+    <style>
+        /* Zerando as propriedades do html */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .navbar-desktop {
+            display: none;
+            background-color: rgb(255, 222, 89);
+        }
+
+        .navbar-mobile {
+            background-color: rgb(255, 222, 89);
+        }
+
+        /* Tamanho da logomarca */
+        .logomarca img {
+            width: 85px;
+            border-radius: 50%;
+        }
+
+        /* Fazendo o menu de navegação sumir e aparecer só quando receber a classe */
+        .menu {
+            display: none;
+            flex-direction: column;
+        }
+
+        .menu.active {
+            display: flex;
+        }
+
+        /* Estilizando e ordenando as posições dos elementos da navbar */
+        .logomarca {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .logomarca i {
+            font-size: 30px;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .logomarca i:hover {
+            background-color: rgb(230, 230, 230);
+        }
+
+        .input-pesquisa {
+            align-self: center;
+            border: 1.8px solid rgb(255, 60, 60);
+            border-radius: 6px;
+            padding: 8px;
+            margin-top: 1rem;
+        }
+
+        .input-pesquisa i {
+            color: rgb(255, 60, 60);
+        }
+
+        .input-pesquisa input[type='search'] {
+            outline: none;
+            border: none;
+            background-color: transparent;
+            font-size: 18px;
+            padding-left: 2px;
+        }
+
+        .nav-menu {
+            align-self: center;
+            list-style: none;
+            font-size: 18px;
+            margin-top: 1rem;
+            width: 100%;
+        }
+
+        .nav-menu .nav-item a {
+            display: block;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding-block: 15px;
+        }
+
+        .nav-menu .nav-item a:hover {
+            background-color: rgb(255, 60, 60);
+            color: rgb(255, 255, 255);
+        }
+
+        .btns-deslogado {
+            align-self: center;
+            margin-top: 1.5rem;
+        }
+
+        .btns-deslogado button {
+            padding: 10px 30px;
+            border: 1.3px solid rgb(255, 60, 60);
+            border-radius: 10px;
+            background-color: transparent;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .btns-deslogado .btn-logar {
+            margin-left: 1rem;
+            background-color: rgb(255, 60, 60);
+            color: rgb(255, 255, 255);
+            transition: .3s;
+        }
+
+        .btns-deslogado .btn-logar:hover {
+            background-color: rgb(255, 0, 0);
+        }
+
+        @media screen and (min-width: 1000px) {
+
+            /* Fazendo a navbar mobile sumir */
+            .navbar-mobile {
+                display: none;
+            }
+
+            .navbar-desktop {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                height: 14vh;
+            }
+
+            /* Definindo o tamanho da logomarca */
+            .navbar-desktop .logomarca-desktop img {
+                width: 90px;
+                border-radius: 50%;
+            }
+
+            /* Menu de navegação do desktop */
+            .navbar-desktop .nav-menu-desktop {
+                display: inline-flex;
+                column-gap: 3rem;
+                list-style: none;
+            }
+
+            .navbar-desktop .nav-menu-desktop .nav-item a {
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                font-size: 18px;
+                transition: .3s;
+            }
+
+            .navbar-desktop .nav-menu-desktop .nav-item a::after {
+                content: '';
+                display: block;
+                width: 0;
+                border-bottom: 2px solid rgb(255, 60, 60);
+                border-radius: 5rem;
+                transition: .3s;
+            }
+
+            .navbar-desktop .nav-menu-desktop .nav-item a:hover::after {
+                width: 100%;
+            }
+
+            .navbar-desktop .nav-menu-desktop .nav-item a:hover {
+                color: rgb(255, 60, 60);
+            }
+
+            /* Input custom da navegação desktop */
+            .input-pesquisa-desktop {
+                display: flex;
+                align-items: center;
+                border: 1.8px solid rgb(255, 60, 60);
+                border-radius: 6px;
+                padding: 8px;
+                width: 30%;
+            }
+
+            .input-pesquisa-desktop i {
+                color: rgb(255, 60, 60);
+                margin-right: .5rem;
+            }
+
+            .input-pesquisa-desktop input[type='search'] {
+                border: none;
+                outline: none;
+                font-size: 18px;
+                padding-left: 2px;
+                background-color: transparent;
+                width: 100%;
+            }
+
+            .btns-deslogado-desktop button {
+                padding: 10px 30px;
+                border: 1.3px solid rgb(255, 60, 60);
+                border-radius: 10px;
+                background-color: transparent;
+                font-size: 18px;
+                cursor: pointer;
+            }
+
+            .btns-deslogado-desktop .btn-logar {
+                background-color: rgb(255, 60, 60);
+                color: rgb(255, 255, 255);
+                transition: .3s;
+            }
+
+            .btns-deslogado-desktop .btn-logar:hover {
+                background-color: rgb(255, 0, 0);
+            }
+        }
+
+        main {
+            background-color: rgb(241, 229, 219);
+        }
+
+        .vantagens {
+            width: 90%;
+            margin: 0 auto;
+            padding: 2.5rem 0 4rem;
+        }
+
+        .vantagens .titulos h1 {
+            font-weight: 400;
+            font-size: 1.53rem;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .cards .card {
+            width: 50%;
+            justify-self: center;
+            align-items: center;
+            background-color: azure;
+            text-align: center;
+            padding: 1rem 0 2rem;
+            border-radius: 15px;
+            box-shadow: 1.5px 1.5px 10px rgb(0, 0, 0);
+        }
+        
+        .cards .card i {
+            font-size: 2.87rem;
+            margin-bottom: 1rem;
+        }
+
+        .cards .card h4 {
+            font-size: 1.23rem;
+        }
+
+        .cards .card p {
+            margin: 1rem 3.5rem 0;
+            font-size: 1.11rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <!-- Navegação Mobile -->
+        <nav class="navbar-mobile">
+
+            <div class="logomarca">
+                <img src="./assets/image/global/logomarca.jpg" alt="Logomarca">
+                <i class="fa-solid fa-bars hamburguer" id="hamburguer"></i>
+            </div>
+
+            <div class="menu">
+                <div class="input-pesquisa">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" name="pesquisa" id="pesquisa">
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#">Início</a></li>
+                    <li class="nav-item"><a href="#">Restaurantes</a></li>
+                    <li class="nav-item"><a href="#">Mercados</a></li>
+                </ul>
+                <div class="btns-deslogado">
+                    <button class="btn-cadastrar">Criar conta</button>
+                    <button class="btn-logar">Entrar</button>
+                </div>
+            </div>
+
+        </nav>
+
+        <!-- Navegação Desktop -->
+        <nav class="navbar-desktop">
+
+            <div class="logomarca-desktop">
+                <img src="./assets/image/global/logomarca.jpg" alt="Logomarca">
+            </div>
+            <ul class="nav-menu-desktop">
+                <li class="nav-item"><a href="#">Início</a></li>
+                <li class="nav-item"><a href="#">Restaurantes</a></li>
+                <li class="nav-item"><a href="#">Mercados</a></li>
+            </ul>
+            <div class="input-pesquisa-desktop">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" name="pesquisa" id="pesquisa">
+            </div>
+            <div class="btns-deslogado-desktop">
+                <button class="btn-cadastrar">Criar conta</button>
+                <button class="btn-logar">Entrar</button>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="vantagens">
+            <div class="titulos">
+                <h1>Mais vantagens para você</h1>
+                <h2>Como entregador Snekki você pode:</h2>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <i class="fa-solid fa-bicycle"></i>
+                    <h4>Escolha seu veículo</h4>
+                    <p>
+                        Use a sua bike, moto, carro, van ou picape para ganhar aquela renda extra, simples assim.
+                    </p>
+                </div>
+                <div class="card">
+                    <i class="fa-regular fa-money-bill-1"></i>
+                    <h4>Fature todo dia!</h4>
+                    <p>
+                        Não ganhe dinheiro apenas no fim do mês, com a Snekki, você recebe a cada entrega.
+                    </p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h4>Use o app quando quiser</h4>
+                    <p>
+                        Como parceiro entregador Snekki você tem liberdade para trabalhar quando quiser.
+                    </p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <h4>Fature todo dia!</h4>
+                    <p>
+                        Não ganhe dinheiro apenas no fim do mês, com a Snekki, você ganha a cada entrega.
+                    </p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h4>Use o app quando quiser</h4>
+                    <p>
+                        Como parceiro entregador Snekki você tem liberdade para trabalhar quando quiser.
+                    </p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-handshake"></i>
+                    <h4>Seja seu próprio chefe</h4>
+                    <p>
+                        Na Snekki você é o patrão, totalmente livre para faturar quando quiser.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://kit.fontawesome.com/884606ba7f.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/pages/index/index.js"></script>
+
+</body>
+
+</html>
