@@ -241,7 +241,7 @@
         }
 
         .cards .card {
-            width: 50%;
+            width: 65%;
             justify-self: center;
             align-items: center;
             background-color: azure;
@@ -250,7 +250,7 @@
             border-radius: 15px;
             box-shadow: 1.5px 1.5px 10px rgb(0, 0, 0);
         }
-        
+
         .cards .card i {
             font-size: 2.87rem;
             margin-bottom: 1rem;
@@ -263,6 +263,216 @@
         .cards .card p {
             margin: 1rem 3.5rem 0;
             font-size: 1.11rem;
+        }
+
+        .requerimento-cadastro {
+            background-color: rgb(255, 255, 255);
+            display: flex;
+        }
+
+        .requerimento-cadastro .img-motoboy img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .requerimento-cadastro .img-motoboy {
+            width: 35%;
+        }
+
+        .requerimento-cadastro .info-cadastro {
+            display: flex;
+            justify-content: end;
+            column-gap: 1.5rem;
+        }
+
+        .requerimento-cadastro .info-cadastro>div {
+            width: 30%;
+        }
+
+        .info-cadastro>div>i {
+            font-size: 2.88rem;
+            background-color: rgb(255, 214, 93);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            margin-top: 1rem;
+        }
+
+        .info-cadastro>div>h4 {
+            text-align: center;
+            margin-block: .3rem;
+        }
+
+        .info-cadastro>div>ul {
+            margin-left: 2rem;
+        }
+
+        .como-funciona {
+            background-color: rgb(61, 61, 61);
+            width: 100%;
+            padding: 5rem 0 3rem;
+        }
+
+        .como-funciona h2 {
+            text-align: center;
+            color: rgb(255, 214, 93);
+        }
+
+        .como-funciona .exemplo-como-funfa .exemplo img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 1px solid rgb(255, 255, 255);
+            margin-bottom: 1.5rem;
+        }
+
+        .como-funciona .exemplo-como-funfa {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(200px, 400px));
+            justify-content: center;
+        }
+
+        .como-funciona .exemplo-como-funfa .exemplo {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .como-funciona .exemplo-como-funfa .exemplo h3 {
+            background-color: rgb(255, 255, 255);
+            padding: 2px 5px;
+            border-radius: 50px;
+        }
+
+        .como-funciona .exemplo-como-funfa .exemplo p {
+            color: rgb(255, 214, 93);
+            text-align: center;
+            padding: 0 80px;
+            font-size: 18px;
+            margin-top: .5rem;
+        }
+
+        .snekki-info .img-motoboy {
+            width: 50%;
+            background-color: aqua;
+        }
+
+        .snekki-info .img-motoboy img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .snekki-info {
+            background-color: rgb(255, 222, 89);
+            display: flex;
+        }
+
+        .snekki-info .info-empresa img {
+            width: 160px;
+            object-fit: cover;
+        }
+
+        .snekki-info .info-empresa .informacao {
+            width: 50%;
+            margin-left: 2rem;
+        }
+
+        .snekki-info .info-empresa {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .snekki-info .info-empresa .informacao p {
+            font-size: 20px;
+        }
+
+        .snekki-info .info-empresa .informacao h4 {
+            font-size: 22px;
+            text-align: center;
+            margin-block: .5rem 1rem;
+        }
+
+        .snekki-info .info-empresa .informacao a {
+            text-decoration: none;
+        }
+
+        .snekki-info .info-empresa .informacao a button {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 214, 93);
+            padding: 10px 15px;
+            border: none;
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+
+        .cadastro {
+            display: flex;
+            justify-content: space-evenly;
+            background-color: rgb(61, 61, 61);
+            padding: 1.5rem 0 3rem;
+        }
+
+        .cadastro div {
+            flex: 0 1 30%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cadastro div i {
+            font-size: 60px;
+            color: rgb(255, 214, 93);
+            display: flex;
+            justify-content: center;
+        }
+
+        .cadastro div p {
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            text-align: center;
+            margin-block: 1rem;
+            width: 300px;
+            align-self: center;
+            font-size: 20px;
+        }
+
+        .cadastro div a {
+            text-decoration: none;
+        }
+
+        .cadastro div button {
+            background-color: transparent;
+            display: block;
+            margin: 0 auto;
+            color: rgb(255, 222, 89);
+            padding: 5px 10px;
+            border: 1px solid rgb(255, 222, 89);
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        .download {
+            min-height: 20vh;
+            background-color: rgb(255, 222, 89);
+        }
+
+        .download h2 {
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .download a {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
         }
     </style>
 </head>
@@ -373,7 +583,112 @@
             </div>
 
         </section>
-
+        <section class="requerimento-cadastro">
+            <div class="img-motoboy">
+                <img src="./files/entregador/motoboy_widelg.jpg" alt="Imagem motoboy">
+            </div>
+            <div class="info-cadastro">
+                <div class="cadastrar-carro">
+                    <i class="fa-solid fa-car"></i>
+                    <h4>Para se cadastrar com carro</h4>
+                    <ul>
+                        <li>CNH tipo B válida;</li>
+                        <li>Comprovante de residência;</li>
+                        <li>Certificado de registro e licenciamento do veículo em dia<br>(não precisa estar no nome do
+                            condutor).</li>
+                    </ul>
+                </div>
+                <div class="cadastrar-moto">
+                    <i class="fa-solid fa-motorcycle"></i>
+                    <h4>Para se cadastrar com moto</h4>
+                    <ul>
+                        <li>CNH tipo A válida;</li>
+                        <li>Comprovante de residência;</li>
+                        <li>Certificado de registro e licenciamento do veículo em dia<br>(não precisa estar no nome do
+                            condutor).</li>
+                    </ul>
+                </div>
+                <div class="cadastrar-bike">
+                    <i class="fa-solid fa-bicycle"></i>
+                    <h4>Para se cadastrar com bike</h4>
+                    <ul>
+                        <li>RG ou CNH;</li>
+                        <li>Ser maior de 18 anos.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="como-funciona">
+            <h2>Mas tá...</h2>
+            <h2>Como funciona na prática?</h2>
+            <div class="exemplo-como-funfa">
+                <div class="exemplo">
+                    <img src="./files/entregador/foto1.jpg" alt="foto1">
+                    <h3>Cadastre-se no site ou no app</h3>
+                    <p>
+                        Preencha todos os dados para realizar seu cadastro e acostumar-se com a interface.
+                    </p>
+                </div>
+                <div class="exemplo">
+                    <img src="./files/entregador/foto2.jpg" alt="foto2">
+                    <h3>Aguarde nosso contato</h3>
+                    <p>
+                        Com os dados preenchidos, você receberá um e-mail para agendar seu treinamento.
+                    </p>
+                </div>
+                <div class="exemplo">
+                    <img src="./files/entregador/foto3.jpg" alt="foto3">
+                    <h3>Comece a faturar</h3>
+                    <p>
+                        Após concluir o treinamento, você estará apto a entregar com a <b>Snekki</b>.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="snekki-info">
+            <div class="info-empresa">
+                <img src="./assets/image/global/logomarca.jpg" alt="logomarca">
+                <div class="informacao">
+                    <p>
+                        Somos uma startup que conecta empresas com entregadores. Por meio de nossa plataforma as
+                        empresas podem chamar os entregadores para realizar a entrega de seus produtos.
+                    </p>
+                    <h4>Seguro, rápido e fácil.</h4>
+                    <a href="#">
+                        <button>Cadastre-se agora</button>
+                    </a>
+                </div>
+            </div>
+            <div class="img-motoboy">
+                <img src="./files/entregador/motoboy.jpg" alt="motoboy">
+            </div>
+        </section>
+        <section class="cadastro">
+            <div class="entregador">
+                <i class="fa-solid fa-motorcycle"></i>
+                <p>
+                    Fature aquela grana extra todo mês ou, se preferir, transforme-a em sua principal fonte de renda!
+                </p>
+                <a href="#">
+                    <button>Quero ser entregador parceiro</button>
+                </a>
+            </div>
+            <div class="restaurante">
+                <i class="fa-solid fa-utensils"></i>
+                <p>
+                    Restaurante, açaiteria, farmácia, varejo. Não importa, nós entregamos seu produto.
+                </p>
+                <a href="#">
+                    <button>Quero ser empresa parceira</button>
+                </a>
+            </div>
+        </section>
+        <section class="download">
+            <h2>Seja nosso parceiro, baixe nosso app e comece a faturar</h2>
+            <a href="#">
+                <img src="./files/entregador/disponivel-google-play-badge-1.png" alt="" width="150px">
+            </a>
+        </section>
     </main>
 
     <script src="https://kit.fontawesome.com/884606ba7f.js" crossorigin="anonymous"></script>
